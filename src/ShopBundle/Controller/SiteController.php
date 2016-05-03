@@ -16,8 +16,7 @@ class SiteController extends Controller
 
     public function createAction()
     {
-        echo "EDDDDDJ";
-        exit;
+
         $product = new Products();
         $product->setName('KIWI');
         $product->setPrice(19.99);

@@ -1,7 +1,7 @@
 site:
-    path: /c
+    path: /
     defaults: { _controller: ShopBundle:Site:index}
 
 create:
-    path: /
+    path: /create
     defaults: { _controller: ShopBundle:Site:create}
