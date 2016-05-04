@@ -20,14 +20,16 @@ class SiteController extends Controller
 
     public function createAction(Request $request)
     {
-        if(!is_null($request->query->get('name'))){
-            
+        if(is_null($request->request->get('name'))){
             return $this->render("ShopBundle:Site:create.html.twig");
         }
         $product = new Products();
         $product->setName($request->get("name"));
         $product->setPrice($request->get("price"));
         $product->setCount($request->get("count"));
+        var_dump($request->request->all());
+        exit;
+
 
         $em = $this->getDoctrine()->getManager();
 

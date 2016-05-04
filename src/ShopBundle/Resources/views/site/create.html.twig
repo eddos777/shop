@@ -2,7 +2,7 @@
 
 {% block body %}
     <div>
-        <form action="{{ path('create') }}">
+        <form action="{{ path('create') }}" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Name">
