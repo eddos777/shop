@@ -9,15 +9,30 @@ use Symfony\Component\HttpFoundation\Response;
 
 class SiteController extends Controller
 {
-    public function indexAction()
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine();
-        $products = $em
-            ->getRepository('ShopBundle:Products')->findAll();
-        return $this->render("ShopBundle:Site:index.html.twig", [ "products" => $products]);
+        $em    = $this->get('doctrine.orm.entity_manager');
+        $dql   = "SELECT p FROM ShopBundle:Products p";
+        $query = $em->createQuery($dql);
 
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1),
+            10
+        );
+
+        return $this->render('ShopBundle:Site:index.html.twig', ['pagination' => $pagination]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
     public function createAction(Request $request)
     {
         if(is_null($request->request->get('name'))){

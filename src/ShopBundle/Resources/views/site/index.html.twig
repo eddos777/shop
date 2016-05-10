@@ -1,27 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Count</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for product in products %}
 
-                <tr>
-                    <th scope="row">{{ product.id }}</th>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.price }}</td>
-                    <td>{{ product.count }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+    {# total items count #}
+    <div class="count">
+        {{ pagination.getTotalItemCount }}
+    </div>
+    <table>
+        <tr>
+            {# sorting of properties based on query components #}
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 's.id') }}</th>
+            <th{% if pagination.isSorted('s.name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Name', 's.name') }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Price', ['s.price', 's.price']) }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Count', ['s.count', 's.count']) }}</th>
+        </tr>
+
+        {# table body #}
+        {% for article in pagination %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.count }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
     </div>
 {% endblock %}
