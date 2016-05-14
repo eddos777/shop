@@ -1,21 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div>
-        <form action="{{ path('create') }}" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name">
-            </div>
-            <div class="form-group">
-                <label for="price">Price</label>
-                <input type="text" class="form-control" id="price" placeholder="Price">
-            </div>
-            <div class="form-group">
-                <label for="count">Count</label>
-                <input type="text" class="form-control" id="count" placeholder="Count">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </div>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+
+    <input type="submit" />
+    {{ form_end(form) }}
 {% endblock %}

@@ -3,6 +3,7 @@
 namespace ShopBundle\Controller;
 
 use ShopBundle\Entity\Products;
+use ShopBundle\Form\ProductForm;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -35,26 +36,29 @@ class SiteController extends Controller
      */
     public function createAction(Request $request)
     {
-        if(is_null($request->request->get('name'))){
-            return $this->render("ShopBundle:Site:create.html.twig");
-        }
-        $product = new Products();
-        $product->setName($request->get("name"));
-        $product->setPrice($request->get("price"));
-        $product->setCount($request->get("count"));
-        var_dump($request->request->all());
-        exit;
-
-
         $em = $this->getDoctrine()->getManager();
 
-        // tells Doctrine you want to (eventually) save the Product (no queries yet)
-        $em->persist($product);
+        $product = new Products();
 
-        // actually executes the queries (i.e. the INSERT query)
-        $em->flush();
+        $productForm = $this->createForm(
+            new ProductForm(),
+            $product
+        );
 
-        /*return new Response('Saved new product with id '.$product->getId());*/
-        return $this->redirect("ShopBundle:Site:index.html.twig");
+        if ($request->isMethod('POST')) {
+            $productForm->handleRequest($request);
+
+            if ($productForm->isValid()) {
+                $productData = $productForm->getData();
+
+                $em->persist($productData);
+                $em->flush();
+
+                return $this->redirect("ShopBundle:Site:index.html.twig");
+            }
+        }
+        return $this->render("ShopBundle:Site:create.html.twig",['form'=> $productForm->createView()]);
+
+
     }
 }

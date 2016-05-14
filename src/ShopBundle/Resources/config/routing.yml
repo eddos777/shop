@@ -5,3 +5,23 @@ site:
 create:
     path: /create
     defaults: { _controller: ShopBundle:Site:create}
+
+view:
+    path: /view
+    defaults: { _controller: ShopBundle:Site:view}
+    requirements:
+        id: \d+
+
+update:
+    path: /update
+    defaults: { _controller: ShopBundle:Site:update}
+    requirements:
+        id: \d+
+
+delete:
+    path: /delete
+    defaults: { _controller: ShopBundle:Site:delete}
+    requirements:
+        id: \d+
+
+

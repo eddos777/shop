@@ -6,22 +6,28 @@
     <div class="count">
         {{ pagination.getTotalItemCount }}
     </div>
-    <table>
+    <table class="table table-condensed">
         <tr>
             {# sorting of properties based on query components #}
-            <th>{{ knp_pagination_sortable(pagination, 'Id', 's.id') }}</th>
-            <th{% if pagination.isSorted('s.name') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Name', 's.name') }}</th>
-            <th>{{ knp_pagination_sortable(pagination, 'Price', ['s.price', 's.price']) }}</th>
-            <th>{{ knp_pagination_sortable(pagination, 'Count', ['s.count', 's.count']) }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Id', 'p.id') }}</th>
+            <th{% if pagination.isSorted('p.name') %} class="sorted"{% endif %}>
+                {{ knp_pagination_sortable(pagination, 'Name', 'p.name') }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Price', ['Price', 'p.price']) }}</th>
+            <th>{{ knp_pagination_sortable(pagination, 'Count', ['Count', 'p.count']) }}</th>
+            <th>Actions</th>
         </tr>
 
         {# table body #}
-        {% for article in pagination %}
+        {% for product in pagination %}
             <tr {% if loop.index is odd %}class="color"{% endif %}>
                 <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.count }}</td>
+                <td><a class="glyphicon glyphicon-eye-open" href="/view" role="button"></a>
+                    <a class="glyphicon glyphicon-pencil" href="/update" role="button"></a>
+                    <a class="glyphicon glyphicon-trash" href="/delete" role="button"></a>
+                </td>
             </tr>
         {% endfor %}
     </table>
