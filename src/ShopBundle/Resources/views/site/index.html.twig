@@ -4,7 +4,7 @@
 
     {# total items count #}
     <div class="count">
-        {{ pagination.getTotalItemCount }}
+       {# {{ pagination.getTotalItemCount }} #}
     </div>
     <table class="table table-condensed">
         <tr>
@@ -24,9 +24,9 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.count }}</td>
-                <td><a class="glyphicon glyphicon-eye-open" href="/view" role="button"></a>
-                    <a class="glyphicon glyphicon-pencil" href="/update" role="button"></a>
-                    <a class="glyphicon glyphicon-trash" href="/delete" role="button"></a>
+                <td><a class="glyphicon glyphicon-eye-open" href="/view?id={{ product.id }}" role="button"></a>
+                    <a class="glyphicon glyphicon-pencil" href="/update?id={{ product.id }}" role="button"></a>
+                    <a class="glyphicon glyphicon-trash" href="/delete?id={{ product.id }}" role="button"></a>
                 </td>
             </tr>
         {% endfor %}

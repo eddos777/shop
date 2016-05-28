@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: 'C:\xampp\htdocs\shop.ll\app/config/routing_dev.yml'

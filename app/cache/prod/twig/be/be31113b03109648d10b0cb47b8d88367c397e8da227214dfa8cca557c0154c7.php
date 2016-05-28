@@ -1,0 +1,513 @@
+<?php
+
+/* base.html.twig */
+class __TwigTemplate_19f173fd256eabd20b124a12349b5f8ea49a6d24db12faca739c9adf70fe7834 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'stylesheets' => array($this, 'block_stylesheets'),
+            'body' => array($this, 'block_body'),
+            'javascripts' => array($this, 'block_javascripts'),
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        // line 1
+        echo "<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=\"UTF-8\"/>
+    <title>";
+        // line 5
+        $this->displayBlock('title', $context, $blocks);
+        echo "</title>
+    ";
+        // line 6
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 7
+        echo "    <link rel=\"icon\" type=\"image/x-icon\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
+        echo "\"/>
+    <link rel=\"stylesheet\"
+          href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/bootstrap/dist/css/bootstrap.min.css"), "html", null, true);
+        echo "\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <!-- Font awesome -->
+    <link href=\"css/font-awesome.css\" rel=\"stylesheet\">
+    <!-- SmartMenus jQuery Bootstrap Addon CSS -->
+    <link href=\"css/jquery.smartmenus.bootstrap.css\" rel=\"stylesheet\">
+    <!-- Product view slider -->
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/jquery.simpleLens.css\">
+    <!-- slick slider -->
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/slick.css\">
+    <!-- price picker slider -->
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/nouislider.css\">
+    <!-- Theme color -->
+    <link id=\"switcher\" href=\"css/theme-color/default-theme.css\" rel=\"stylesheet\">
+    <!-- <link id=\"switcher\" href=\"css/theme-color/bridge-theme.css\" rel=\"stylesheet\"> -->
+    <!-- Top Slider CSS -->
+    <link href=\"css/sequence-theme.modern-slide-in.css\" rel=\"stylesheet\" media=\"all\">
+
+    <!-- Main style sheet -->
+    <link href=\"css/style.css\" rel=\"stylesheet\">
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <script src=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/jquery/dist/jquery.min.js"), "html", null, true);
+        echo "\"></script>
+</head>
+<body>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : 'your-app-id',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = \"//connect.facebook.net/en_US/sdk.js\";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class=\"container\">
+    <nav class=\"navbar navbar-default\">
+        <div class=\"container-fluid\">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class=\"navbar-header\">
+                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\"
+                        data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">
+                    <span class=\"sr-only\">Toggle navigation</span>
+                    <span class=\"icon-bar\"></span>
+                    <span class=\"icon-bar\"></span>
+                    <span class=\"icon-bar\"></span>
+                </button>
+                <a class=\"navbar-brand\" href=\"/\">Shop.ll</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
+                <ul class=\"nav navbar-nav\">
+                    <li><a href=\"create\">Create</a></li>
+                    <li class=\"dropdown\">
+                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"
+                           aria-expanded=\"false\">Products type<span class=\"caret\"></span>
+                        </a>
+                        <ul class=\"dropdown-menu\">
+                            <li><a href=\"#\">Action</a></li>
+                            <li><a href=\"#\">Another action</a></li>
+                            <li><a href=\"#\">Something else here</a></li>
+                            <li role=\"separator\" class=\"divider\"></li>
+                            <li><a href=\"#\">Separated link</a></li>
+                            <li role=\"separator\" class=\"divider\"></li>
+                            <li><a href=\"#\">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class=\"navbar-form navbar-left\" role=\"search\">
+                    <div class=\"form-group\">
+                        <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
+                    </div>
+                    <button type=\"submit\" class=\"btn btn-default\">Submit</button>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    ";
+        // line 97
+        $this->displayBlock('body', $context, $blocks);
+        // line 98
+        echo "    ";
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 99
+        echo "</div>
+
+<footer id=\"aa-footer\">
+    <!-- footer bottom -->
+    <div class=\"aa-footer-top\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-md-12\">
+                    <div class=\"aa-footer-top-area\">
+                        <div class=\"row\">
+                            <div class=\"col-md-3 col-sm-6\">
+                                <div class=\"aa-footer-widget\">
+                                    <h3>Main Menu</h3>
+                                    <ul class=\"aa-footer-nav\">
+                                        <li><a href=\"#\">Home</a></li>
+                                        <li><a href=\"#\">Our Services</a></li>
+                                        <li><a href=\"#\">Our Products</a></li>
+                                        <li><a href=\"#\">About Us</a></li>
+                                        <li><a href=\"#\">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-6\">
+                                <div class=\"aa-footer-widget\">
+                                    <div class=\"aa-footer-widget\">
+                                        <h3>Knowledge Base</h3>
+                                        <ul class=\"aa-footer-nav\">
+                                            <li><a href=\"#\">Delivery</a></li>
+                                            <li><a href=\"#\">Returns</a></li>
+                                            <li><a href=\"#\">Services</a></li>
+                                            <li><a href=\"#\">Discount</a></li>
+                                            <li><a href=\"#\">Special Offer</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-6\">
+                                <div class=\"aa-footer-widget\">
+                                    <div class=\"aa-footer-widget\">
+                                        <h3>Useful Links</h3>
+                                        <ul class=\"aa-footer-nav\">
+                                            <li><a href=\"#\">Site Map</a></li>
+                                            <li><a href=\"#\">Search</a></li>
+                                            <li><a href=\"#\">Advanced Search</a></li>
+                                            <li><a href=\"#\">Suppliers</a></li>
+                                            <li><a href=\"#\">FAQ</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"col-md-3 col-sm-6\">
+                                <div class=\"aa-footer-widget\">
+                                    <div class=\"aa-footer-widget\">
+                                        <h3>Contact Us</h3>
+                                        <address>
+                                            <p> 25 Astor Pl, NY 10003, USA</p>
+                                            <p><span class=\"fa fa-phone\"></span>+1 212-982-4589</p>
+                                            <p><span class=\"fa fa-envelope\"></span>dailyshop@gmail.com</p>
+                                        </address>
+                                        <div class=\"aa-footer-social\">
+                                            <a href=\"#\"><span class=\"fa fa-facebook\"></span></a>
+                                            <a href=\"#\"><span class=\"fa fa-twitter\"></span></a>
+                                            <a href=\"#\"><span class=\"fa fa-google-plus\"></span></a>
+                                            <a href=\"#\"><span class=\"fa fa-youtube\"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer-bottom -->
+    <div class=\"aa-footer-bottom\">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-md-12\">
+                    <div class=\"aa-footer-bottom-area\">
+                        <p>Designed by <a href=\"http://www.markups.io/\">MarkUps.io</a></p>
+                        <div class=\"aa-footer-payment\">
+                            <span class=\"fa fa-cc-mastercard\"></span>
+                            <span class=\"fa fa-cc-visa\"></span>
+                            <span class=\"fa fa-paypal\"></span>
+                            <span class=\"fa fa-cc-discover\"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src=\"";
+        // line 193
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/jquery/dist/jquery.min.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 194
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/bootstrap/dist/js/bootstrap.min.js"), "html", null, true);
+        echo "\"></script>
+<!-- SmartMenus jQuery plugin -->
+<script type=\"text/javascript\" src=\"js/jquery.smartmenus.js\"></script>
+<!-- SmartMenus jQuery Bootstrap Addon -->
+<script type=\"text/javascript\" src=\"js/jquery.smartmenus.bootstrap.js\"></script>
+<!-- To Slider JS -->
+<script src=\"js/sequence.js\"></script>
+<script src=\"js/sequence-theme.modern-slide-in.js\"></script>
+<!-- Product view slider -->
+<script type=\"text/javascript\" src=\"js/jquery.simpleGallery.js\"></script>
+<script type=\"text/javascript\" src=\"js/jquery.simpleLens.js\"></script>
+<!-- slick slider -->
+<script type=\"text/javascript\" src=\"js/slick.js\"></script>
+<!-- Price picker slider -->
+<script type=\"text/javascript\" src=\"js/nouislider.js\"></script>
+<!-- Custom js -->
+<script src=\"js/custom.js\"></script>
+
+</body>
+</html>
+";
+    }
+
+    // line 5
+    public function block_title($context, array $blocks = array())
+    {
+        echo "Welcome!";
+    }
+
+    // line 6
+    public function block_stylesheets($context, array $blocks = array())
+    {
+    }
+
+    // line 97
+    public function block_body($context, array $blocks = array())
+    {
+    }
+
+    // line 98
+    public function block_javascripts($context, array $blocks = array())
+    {
+    }
+
+    public function getTemplateName()
+    {
+        return "base.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  281 => 98,  276 => 97,  271 => 6,  265 => 5,  240 => 194,  236 => 193,  140 => 99,  137 => 98,  135 => 97,  69 => 34,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+    }
+}
+/* <!DOCTYPE html>*/
+/* <html>*/
+/* <head>*/
+/*     <meta charset="UTF-8"/>*/
+/*     <title>{% block title %}Welcome!{% endblock %}</title>*/
+/*     {% block stylesheets %}{% endblock %}*/
+/*     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>*/
+/*     <link rel="stylesheet"*/
+/*           href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">*/
+/*     <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
+/*     <meta name="viewport" content="width=device-width, initial-scale=1">*/
+/*     <!-- Font awesome -->*/
+/*     <link href="css/font-awesome.css" rel="stylesheet">*/
+/*     <!-- SmartMenus jQuery Bootstrap Addon CSS -->*/
+/*     <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet">*/
+/*     <!-- Product view slider -->*/
+/*     <link rel="stylesheet" type="text/css" href="css/jquery.simpleLens.css">*/
+/*     <!-- slick slider -->*/
+/*     <link rel="stylesheet" type="text/css" href="css/slick.css">*/
+/*     <!-- price picker slider -->*/
+/*     <link rel="stylesheet" type="text/css" href="css/nouislider.css">*/
+/*     <!-- Theme color -->*/
+/*     <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">*/
+/*     <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->*/
+/*     <!-- Top Slider CSS -->*/
+/*     <link href="css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">*/
+/* */
+/*     <!-- Main style sheet -->*/
+/*     <link href="css/style.css" rel="stylesheet">*/
+/* */
+/*     <!-- Google Font -->*/
+/*     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>*/
+/*     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>*/
+/*     <script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>*/
+/* </head>*/
+/* <body>*/
+/* <script>*/
+/*     window.fbAsyncInit = function() {*/
+/*         FB.init({*/
+/*             appId      : 'your-app-id',*/
+/*             xfbml      : true,*/
+/*             version    : 'v2.5'*/
+/*         });*/
+/*     };*/
+/* */
+/*     (function(d, s, id){*/
+/*         var js, fjs = d.getElementsByTagName(s)[0];*/
+/*         if (d.getElementById(id)) {return;}*/
+/*         js = d.createElement(s); js.id = id;*/
+/*         js.src = "//connect.facebook.net/en_US/sdk.js";*/
+/*         fjs.parentNode.insertBefore(js, fjs);*/
+/*     }(document, 'script', 'facebook-jssdk'));*/
+/* </script>*/
+/* <div class="container">*/
+/*     <nav class="navbar navbar-default">*/
+/*         <div class="container-fluid">*/
+/*             <!-- Brand and toggle get grouped for better mobile display -->*/
+/*             <div class="navbar-header">*/
+/*                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"*/
+/*                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">*/
+/*                     <span class="sr-only">Toggle navigation</span>*/
+/*                     <span class="icon-bar"></span>*/
+/*                     <span class="icon-bar"></span>*/
+/*                     <span class="icon-bar"></span>*/
+/*                 </button>*/
+/*                 <a class="navbar-brand" href="/">Shop.ll</a>*/
+/*             </div>*/
+/* */
+/*             <!-- Collect the nav links, forms, and other content for toggling -->*/
+/*             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*/
+/*                 <ul class="nav navbar-nav">*/
+/*                     <li><a href="create">Create</a></li>*/
+/*                     <li class="dropdown">*/
+/*                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"*/
+/*                            aria-expanded="false">Products type<span class="caret"></span>*/
+/*                         </a>*/
+/*                         <ul class="dropdown-menu">*/
+/*                             <li><a href="#">Action</a></li>*/
+/*                             <li><a href="#">Another action</a></li>*/
+/*                             <li><a href="#">Something else here</a></li>*/
+/*                             <li role="separator" class="divider"></li>*/
+/*                             <li><a href="#">Separated link</a></li>*/
+/*                             <li role="separator" class="divider"></li>*/
+/*                             <li><a href="#">One more separated link</a></li>*/
+/*                         </ul>*/
+/*                     </li>*/
+/*                 </ul>*/
+/*                 <form class="navbar-form navbar-left" role="search">*/
+/*                     <div class="form-group">*/
+/*                         <input type="text" class="form-control" placeholder="Search">*/
+/*                     </div>*/
+/*                     <button type="submit" class="btn btn-default">Submit</button>*/
+/*                 </form>*/
+/*             </div><!-- /.navbar-collapse -->*/
+/*         </div><!-- /.container-fluid -->*/
+/*     </nav>*/
+/*     {% block body %}{% endblock %}*/
+/*     {% block javascripts %}{% endblock %}*/
+/* </div>*/
+/* */
+/* <footer id="aa-footer">*/
+/*     <!-- footer bottom -->*/
+/*     <div class="aa-footer-top">*/
+/*         <div class="container">*/
+/*             <div class="row">*/
+/*                 <div class="col-md-12">*/
+/*                     <div class="aa-footer-top-area">*/
+/*                         <div class="row">*/
+/*                             <div class="col-md-3 col-sm-6">*/
+/*                                 <div class="aa-footer-widget">*/
+/*                                     <h3>Main Menu</h3>*/
+/*                                     <ul class="aa-footer-nav">*/
+/*                                         <li><a href="#">Home</a></li>*/
+/*                                         <li><a href="#">Our Services</a></li>*/
+/*                                         <li><a href="#">Our Products</a></li>*/
+/*                                         <li><a href="#">About Us</a></li>*/
+/*                                         <li><a href="#">Contact Us</a></li>*/
+/*                                     </ul>*/
+/*                                 </div>*/
+/*                             </div>*/
+/*                             <div class="col-md-3 col-sm-6">*/
+/*                                 <div class="aa-footer-widget">*/
+/*                                     <div class="aa-footer-widget">*/
+/*                                         <h3>Knowledge Base</h3>*/
+/*                                         <ul class="aa-footer-nav">*/
+/*                                             <li><a href="#">Delivery</a></li>*/
+/*                                             <li><a href="#">Returns</a></li>*/
+/*                                             <li><a href="#">Services</a></li>*/
+/*                                             <li><a href="#">Discount</a></li>*/
+/*                                             <li><a href="#">Special Offer</a></li>*/
+/*                                         </ul>*/
+/*                                     </div>*/
+/*                                 </div>*/
+/*                             </div>*/
+/*                             <div class="col-md-3 col-sm-6">*/
+/*                                 <div class="aa-footer-widget">*/
+/*                                     <div class="aa-footer-widget">*/
+/*                                         <h3>Useful Links</h3>*/
+/*                                         <ul class="aa-footer-nav">*/
+/*                                             <li><a href="#">Site Map</a></li>*/
+/*                                             <li><a href="#">Search</a></li>*/
+/*                                             <li><a href="#">Advanced Search</a></li>*/
+/*                                             <li><a href="#">Suppliers</a></li>*/
+/*                                             <li><a href="#">FAQ</a></li>*/
+/*                                         </ul>*/
+/*                                     </div>*/
+/*                                 </div>*/
+/*                             </div>*/
+/*                             <div class="col-md-3 col-sm-6">*/
+/*                                 <div class="aa-footer-widget">*/
+/*                                     <div class="aa-footer-widget">*/
+/*                                         <h3>Contact Us</h3>*/
+/*                                         <address>*/
+/*                                             <p> 25 Astor Pl, NY 10003, USA</p>*/
+/*                                             <p><span class="fa fa-phone"></span>+1 212-982-4589</p>*/
+/*                                             <p><span class="fa fa-envelope"></span>dailyshop@gmail.com</p>*/
+/*                                         </address>*/
+/*                                         <div class="aa-footer-social">*/
+/*                                             <a href="#"><span class="fa fa-facebook"></span></a>*/
+/*                                             <a href="#"><span class="fa fa-twitter"></span></a>*/
+/*                                             <a href="#"><span class="fa fa-google-plus"></span></a>*/
+/*                                             <a href="#"><span class="fa fa-youtube"></span></a>*/
+/*                                         </div>*/
+/*                                     </div>*/
+/*                                 </div>*/
+/*                             </div>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                 </div>*/
+/*             </div>*/
+/*         </div>*/
+/*     </div>*/
+/*     <!-- footer-bottom -->*/
+/*     <div class="aa-footer-bottom">*/
+/*         <div class="container">*/
+/*             <div class="row">*/
+/*                 <div class="col-md-12">*/
+/*                     <div class="aa-footer-bottom-area">*/
+/*                         <p>Designed by <a href="http://www.markups.io/">MarkUps.io</a></p>*/
+/*                         <div class="aa-footer-payment">*/
+/*                             <span class="fa fa-cc-mastercard"></span>*/
+/*                             <span class="fa fa-cc-visa"></span>*/
+/*                             <span class="fa fa-paypal"></span>*/
+/*                             <span class="fa fa-cc-discover"></span>*/
+/*                         </div>*/
+/*                     </div>*/
+/*                 </div>*/
+/*             </div>*/
+/*         </div>*/
+/*     </div>*/
+/* </footer>*/
+/* */
+/* <script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>*/
+/* <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>*/
+/* <!-- SmartMenus jQuery plugin -->*/
+/* <script type="text/javascript" src="js/jquery.smartmenus.js"></script>*/
+/* <!-- SmartMenus jQuery Bootstrap Addon -->*/
+/* <script type="text/javascript" src="js/jquery.smartmenus.bootstrap.js"></script>*/
+/* <!-- To Slider JS -->*/
+/* <script src="js/sequence.js"></script>*/
+/* <script src="js/sequence-theme.modern-slide-in.js"></script>*/
+/* <!-- Product view slider -->*/
+/* <script type="text/javascript" src="js/jquery.simpleGallery.js"></script>*/
+/* <script type="text/javascript" src="js/jquery.simpleLens.js"></script>*/
+/* <!-- slick slider -->*/
+/* <script type="text/javascript" src="js/slick.js"></script>*/
+/* <!-- Price picker slider -->*/
+/* <script type="text/javascript" src="js/nouislider.js"></script>*/
+/* <!-- Custom js -->*/
+/* <script src="js/custom.js"></script>*/
+/* */
+/* </body>*/
+/* </html>*/
+/* */

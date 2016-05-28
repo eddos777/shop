@@ -16,11 +16,11 @@ class SiteController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $em    = $this->get('doctrine.orm.entity_manager');
-        $dql   = "SELECT p FROM ShopBundle:Products p";
+        $em = $this->get('doctrine.orm.entity_manager');
+        $dql = "SELECT p FROM ShopBundle:Products p";
         $query = $em->createQuery($dql);
 
-        $paginator  = $this->get('knp_paginator');
+        $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query,
             $request->query->getInt('page', 1),
@@ -54,11 +54,64 @@ class SiteController extends Controller
                 $em->persist($productData);
                 $em->flush();
 
-                return $this->redirect("ShopBundle:Site:index.html.twig");
+                return $this->redirectToRoute("site", [], Response::HTTP_CREATED);
             }
         }
-        return $this->render("ShopBundle:Site:create.html.twig",['form'=> $productForm->createView()]);
+        return $this->render("ShopBundle:Site:create.html.twig", ['form' => $productForm->createView()]);
 
 
+    }
+
+    public function deleteAction(Request $request)
+    {
+        $id = $request->query->get("id");
+        $em = $this->getDoctrine()->getManager();
+        $product = $this->getDoctrine()
+            ->getRepository('ShopBundle:Products')
+            ->find($id);
+        $em->remove($product);
+        $em->flush();
+
+        return $this->redirectToRoute("site", []);
+    }
+
+
+    public function updateAction(Request $request)
+    {
+        $id = $request->query->get("id");
+        $em = $this->getDoctrine()->getManager();
+        $product = $em
+            ->getRepository('ShopBundle:Products')
+            ->find($id);
+        if (!$product) {
+            throw $this->createNotFoundException(
+                'No product found for id ' . $id
+            );
+        }
+        if ($request->isMethod('POST')) {
+            $product->setName($request->request->get("name"));
+            $product->setPrice($request->request->get("price"));
+            $product->setCount($request->request->get("count"));
+            $em->persist($product);
+            $em->flush();
+
+            return $this->redirectToRoute("site", []);
+        }
+        return $this->render("ShopBundle:Site:update.html.twig", compact("product"));
+    }
+
+    public function viewAction(Request $request)
+    {
+        $id = $request->query->get("id");
+        $em = $this->getDoctrine()->getManager();
+        $product = $em
+            ->getRepository('ShopBundle:Products')
+            ->find($id);
+        if (!$product) {
+            throw $this->createNotFoundException(
+                'No product found for id ' . $id
+            );
+        }
+        return $this->render("ShopBundle:Site:view.html.twig", compact("product"));
     }
 }

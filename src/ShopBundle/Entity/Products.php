@@ -12,12 +12,66 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Products
 {
+    const TYPE_IS_ACTIVE = 1;
+    
+    const TYPE_IS_SALE = 2;
+    
+    public static $types = [
+        self::TYPE_IS_ACTIVE=>"ACTIVE",
+        self::TYPE_IS_SALE=>"SALE"
+    ];
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=80, nullable=true)
      */
     private $name;
+
+  /**
+     * @var integer
+     *
+     * @ORM\Column(name="category_id", type="integer")
+     */
+    private $categoryId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="type", type="integer")
+     */
+    private $type;
+
+    /**
+     * @return int
+     */
+    public function getCategoryId()
+    {
+        return $this->categoryId;
+    }
+
+    /**
+     * @param int $categoryId
+     */
+    public function setCategoryId($categoryId)
+    {
+        $this->categoryId = $categoryId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param int $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
 
     /**
      * @var float

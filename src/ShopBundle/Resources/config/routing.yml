@@ -23,5 +23,10 @@ delete:
     defaults: { _controller: ShopBundle:Site:delete}
     requirements:
         id: \d+
+index:
+    path: /products
+    defaults: { _controller: ShopBundle:Products:index}
 
-
+index:
+    path: /categories
+    defaults: { _controller: ShopBundle:Categories:index}
