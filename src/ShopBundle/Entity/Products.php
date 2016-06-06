@@ -17,9 +17,10 @@ class Products
     const TYPE_IS_SALE = 2;
     
     public static $types = [
-        self::TYPE_IS_ACTIVE=>"ACTIVE",
-        self::TYPE_IS_SALE=>"SALE"
+        self::TYPE_IS_ACTIVE => "ACTIVE",
+        self::TYPE_IS_SALE => "SALE"
     ];
+    
     /**
      * @var string
      *
@@ -104,7 +105,40 @@ class Products
     private $id;
 
 
+    private $images;
 
+    /**
+     * @return array
+     */
+    public static function getTypes()
+    {
+        return self::$types;
+    }
+
+    /**
+     * @param array $types
+     */
+    public static function setTypes($types)
+    {
+        self::$types = $types;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * @param mixed $images
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+    }
+    
     /**
      * Set name
      *

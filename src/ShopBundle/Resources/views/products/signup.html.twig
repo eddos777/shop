@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.password) }}
+
+    <div class="row margin">
+        <div class="input-field col s7 offset-s5">
+            <button class="btn waves-effect waves-light" type="submit" name="action">
+                Sign up
+            </button>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,32 +1,44 @@
 site:
-    path: /
+    path: /admin/products
     defaults: { _controller: ShopBundle:Site:index}
 
 create:
-    path: /create
+    path: /admin/products/create
     defaults: { _controller: ShopBundle:Site:create}
 
 view:
-    path: /view
+    path: /admin/products/view
     defaults: { _controller: ShopBundle:Site:view}
     requirements:
         id: \d+
 
 update:
-    path: /update
+    path: /admin/products/update
     defaults: { _controller: ShopBundle:Site:update}
     requirements:
         id: \d+
 
 delete:
-    path: /delete
+    path: /admin/products/delete
     defaults: { _controller: ShopBundle:Site:delete}
     requirements:
         id: \d+
 index:
-    path: /products
+    path: /
     defaults: { _controller: ShopBundle:Products:index}
 
-index:
+categories:
     path: /categories
     defaults: { _controller: ShopBundle:Categories:index}
+
+login:
+    path: /login
+    defaults: { _controller: ShopBundle:Products:login }
+
+signup:
+    path: /register
+    defaults: { _controller: ShopBundle:Products:signup }
+
+logout:
+    path: /logout
+    defaults: { _controller: ShopBundle:Products:logout }

@@ -64,10 +64,10 @@ class Products extends \ShopBundle\Entity\Products implements \Doctrine\ORM\Prox
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'name', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'categoryId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'type', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'price', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'count', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'feedbackId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'id');
+            return array('__isInitialized__', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'name', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'categoryId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'type', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'price', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'count', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'feedbackId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'id', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'images');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'name', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'categoryId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'type', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'price', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'count', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'feedbackId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'id');
+        return array('__isInitialized__', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'name', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'categoryId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'type', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'price', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'count', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'feedbackId', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'id', '' . "\0" . 'ShopBundle\\Entity\\Products' . "\0" . 'images');
     }
 
     /**
@@ -215,6 +215,28 @@ class Products extends \ShopBundle\Entity\Products implements \Doctrine\ORM\Prox
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setType', array($type));
 
         return parent::setType($type);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImages()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImages', array());
+
+        return parent::getImages();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImages($images)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImages', array($images));
+
+        return parent::setImages($images);
     }
 
     /**

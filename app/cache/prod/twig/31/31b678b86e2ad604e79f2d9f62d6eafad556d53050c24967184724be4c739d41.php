@@ -19,8 +19,8 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f8c24773a40c8503a24329af3d905bf8d39203165dba4ae6f8ef67ed68d1f543 = $this->env->getExtension("native_profiler");
-        $__internal_f8c24773a40c8503a24329af3d905bf8d39203165dba4ae6f8ef67ed68d1f543->enter($__internal_f8c24773a40c8503a24329af3d905bf8d39203165dba4ae6f8ef67ed68d1f543_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446 = $this->env->getExtension("native_profiler");
+        $__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446->enter($__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -35,9 +35,7 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
-        echo "    <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\"/>
+        echo "    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"images/favicon.ico\"/>
     <link rel=\"stylesheet\"
           href=\"";
         // line 9
@@ -74,22 +72,91 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 </head>
 <body>
 <script>
+    // This is called with the results from from FB.getLoginStatus().
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        // The response object is returned with a status field that lets the
+        // app know the current login status of the person.
+        // Full docs on the response object can be found in the documentation
+        // for FB.getLoginStatus().
+        if (response.status === '1601390663506352') {
+            // Logged into your app and Facebook.
+            testAPI();
+        } else if (response.status === 'not_authorized') {
+            // The person is logged into Facebook, but not your app.
+            document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+        } else {
+            // The person is not logged into Facebook, so we're not sure if
+            // they are logged into this app or not.
+            document.getElementById('status').innerHTML = 'Please log ' +
+                    'into Facebook.';
+        }
+    }
+
+    // This function is called when someone finishes with the Login
+    // Button.  See the onlogin handler attached to it in the sample
+    // code below.
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : 'your-app-id',
-            xfbml      : true,
-            version    : 'v2.5'
+            appId      : '{1601390663506352}',
+            cookie     : true,  // enable cookies to allow the server to access
+                                // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.6' // use version 2.2
         });
+
+        // Now that we've initialized the JavaScript SDK, we call
+        // FB.getLoginStatus().  This function gets the state of the
+        // person visiting this page and can return one of three states to
+        // the callback you provide.  They can be:
+        //
+        // 1. Logged into your app ('connected')
+        // 2. Logged into Facebook, but not your app ('not_authorized')
+        // 3. Not logged into Facebook and can't tell if they are logged into
+        //    your app or not.
+        //
+        // These three cases are handled in the callback function.
+
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+
     };
 
-    (function(d, s, id){
+    // Load the SDK asynchronously
+    (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
+        if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = \"//connect.facebook.net/en_US/sdk.js\";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    // Here we run a very simple test of the Graph API after login is
+    // successful.  See statusChangeCallback() for when this call is made.
+    function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function (response) {
+            console.log('Successful login for: ' + response.name);
+            document.getElementById('status').innerHTML =
+                    'Thanks for logging in, ' + response.name + '!';
+        });
+    }
 </script>
+<div
+        class=\"fb-like\"
+        data-share=\"true\"
+        data-width=\"450\"
+        data-show-faces=\"true\">
+</div>
 <div class=\"container\">
     <nav class=\"navbar navbar-default\">
         <div class=\"container-fluid\">
@@ -108,7 +175,8 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
-                    <li><a href=\"create\">Create</a></li>
+                    <li><a href=\"login\">Login</a></li>
+                    <li><a href=\"register\">Register</a></li>
                     <li class=\"dropdown\">
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"
                            aria-expanded=\"false\">Products type<span class=\"caret\"></span>
@@ -134,12 +202,12 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
         </div><!-- /.container-fluid -->
     </nav>
     ";
-        // line 97
+        // line 167
         $this->displayBlock('body', $context, $blocks);
-        // line 98
+        // line 168
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 99
+        // line 169
         echo "</div>
 
 <footer id=\"aa-footer\">
@@ -235,11 +303,11 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 </footer>
 
 <script src=\"";
-        // line 193
+        // line 263
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/jquery/dist/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 194
+        // line 264
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/bootstrap/dist/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <!-- SmartMenus jQuery plugin -->
@@ -263,52 +331,52 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 </html>
 ";
         
-        $__internal_f8c24773a40c8503a24329af3d905bf8d39203165dba4ae6f8ef67ed68d1f543->leave($__internal_f8c24773a40c8503a24329af3d905bf8d39203165dba4ae6f8ef67ed68d1f543_prof);
+        $__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446->leave($__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_5634c2f8c152e9744e35d7e26627621da9c807eaf7443f0d1f5528365a58e0cb = $this->env->getExtension("native_profiler");
-        $__internal_5634c2f8c152e9744e35d7e26627621da9c807eaf7443f0d1f5528365a58e0cb->enter($__internal_5634c2f8c152e9744e35d7e26627621da9c807eaf7443f0d1f5528365a58e0cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724 = $this->env->getExtension("native_profiler");
+        $__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724->enter($__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Admin";
         
-        $__internal_5634c2f8c152e9744e35d7e26627621da9c807eaf7443f0d1f5528365a58e0cb->leave($__internal_5634c2f8c152e9744e35d7e26627621da9c807eaf7443f0d1f5528365a58e0cb_prof);
+        $__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724->leave($__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_1c83daeba305e906eec0eebbc107c858ec51bc6bd1486248b84da3d408e96e1c = $this->env->getExtension("native_profiler");
-        $__internal_1c83daeba305e906eec0eebbc107c858ec51bc6bd1486248b84da3d408e96e1c->enter($__internal_1c83daeba305e906eec0eebbc107c858ec51bc6bd1486248b84da3d408e96e1c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5 = $this->env->getExtension("native_profiler");
+        $__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5->enter($__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_1c83daeba305e906eec0eebbc107c858ec51bc6bd1486248b84da3d408e96e1c->leave($__internal_1c83daeba305e906eec0eebbc107c858ec51bc6bd1486248b84da3d408e96e1c_prof);
+        $__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5->leave($__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5_prof);
 
     }
 
-    // line 97
+    // line 167
     public function block_body($context, array $blocks = array())
     {
-        $__internal_77433bc2701e6d4643b686e5f3f38f2995fe40b78f4b06fce8622a481acba5f6 = $this->env->getExtension("native_profiler");
-        $__internal_77433bc2701e6d4643b686e5f3f38f2995fe40b78f4b06fce8622a481acba5f6->enter($__internal_77433bc2701e6d4643b686e5f3f38f2995fe40b78f4b06fce8622a481acba5f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a = $this->env->getExtension("native_profiler");
+        $__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a->enter($__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_77433bc2701e6d4643b686e5f3f38f2995fe40b78f4b06fce8622a481acba5f6->leave($__internal_77433bc2701e6d4643b686e5f3f38f2995fe40b78f4b06fce8622a481acba5f6_prof);
+        $__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a->leave($__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a_prof);
 
     }
 
-    // line 98
+    // line 168
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b729a8acd08387a760f45feb1d7aa6143f6248e7c65db2d75524e36604cb9c59 = $this->env->getExtension("native_profiler");
-        $__internal_b729a8acd08387a760f45feb1d7aa6143f6248e7c65db2d75524e36604cb9c59->enter($__internal_b729a8acd08387a760f45feb1d7aa6143f6248e7c65db2d75524e36604cb9c59_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b = $this->env->getExtension("native_profiler");
+        $__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b->enter($__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_b729a8acd08387a760f45feb1d7aa6143f6248e7c65db2d75524e36604cb9c59->leave($__internal_b729a8acd08387a760f45feb1d7aa6143f6248e7c65db2d75524e36604cb9c59_prof);
+        $__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b->leave($__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b_prof);
 
     }
 
@@ -324,16 +392,16 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 
     public function getDebugInfo()
     {
-        return array (  305 => 98,  294 => 97,  283 => 6,  271 => 5,  243 => 194,  239 => 193,  143 => 99,  140 => 98,  138 => 97,  72 => 34,  44 => 9,  38 => 7,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  373 => 168,  362 => 167,  351 => 6,  339 => 5,  311 => 264,  307 => 263,  211 => 169,  208 => 168,  206 => 167,  70 => 34,  42 => 9,  38 => 7,  36 => 6,  32 => 5,  26 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
 /* <html>*/
 /* <head>*/
 /*     <meta charset="UTF-8"/>*/
-/*     <title>{% block title %}Welcome!{% endblock %}</title>*/
+/*     <title>{% block title %}Admin{% endblock %}</title>*/
 /*     {% block stylesheets %}{% endblock %}*/
-/*     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>*/
+/*     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>*/
 /*     <link rel="stylesheet"*/
 /*           href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">*/
 /*     <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
@@ -364,22 +432,91 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 /* </head>*/
 /* <body>*/
 /* <script>*/
+/*     // This is called with the results from from FB.getLoginStatus().*/
+/*     function statusChangeCallback(response) {*/
+/*         console.log('statusChangeCallback');*/
+/*         console.log(response);*/
+/*         // The response object is returned with a status field that lets the*/
+/*         // app know the current login status of the person.*/
+/*         // Full docs on the response object can be found in the documentation*/
+/*         // for FB.getLoginStatus().*/
+/*         if (response.status === '1601390663506352') {*/
+/*             // Logged into your app and Facebook.*/
+/*             testAPI();*/
+/*         } else if (response.status === 'not_authorized') {*/
+/*             // The person is logged into Facebook, but not your app.*/
+/*             document.getElementById('status').innerHTML = 'Please log ' +*/
+/*                     'into this app.';*/
+/*         } else {*/
+/*             // The person is not logged into Facebook, so we're not sure if*/
+/*             // they are logged into this app or not.*/
+/*             document.getElementById('status').innerHTML = 'Please log ' +*/
+/*                     'into Facebook.';*/
+/*         }*/
+/*     }*/
+/* */
+/*     // This function is called when someone finishes with the Login*/
+/*     // Button.  See the onlogin handler attached to it in the sample*/
+/*     // code below.*/
+/*     function checkLoginState() {*/
+/*         FB.getLoginStatus(function(response) {*/
+/*             statusChangeCallback(response);*/
+/*         });*/
+/*     }*/
+/* */
 /*     window.fbAsyncInit = function() {*/
 /*         FB.init({*/
-/*             appId      : 'your-app-id',*/
-/*             xfbml      : true,*/
-/*             version    : 'v2.5'*/
+/*             appId      : '{1601390663506352}',*/
+/*             cookie     : true,  // enable cookies to allow the server to access*/
+/*                                 // the session*/
+/*             xfbml      : true,  // parse social plugins on this page*/
+/*             version    : 'v2.6' // use version 2.2*/
 /*         });*/
+/* */
+/*         // Now that we've initialized the JavaScript SDK, we call*/
+/*         // FB.getLoginStatus().  This function gets the state of the*/
+/*         // person visiting this page and can return one of three states to*/
+/*         // the callback you provide.  They can be:*/
+/*         //*/
+/*         // 1. Logged into your app ('connected')*/
+/*         // 2. Logged into Facebook, but not your app ('not_authorized')*/
+/*         // 3. Not logged into Facebook and can't tell if they are logged into*/
+/*         //    your app or not.*/
+/*         //*/
+/*         // These three cases are handled in the callback function.*/
+/* */
+/*         FB.getLoginStatus(function(response) {*/
+/*             statusChangeCallback(response);*/
+/*         });*/
+/* */
 /*     };*/
 /* */
-/*     (function(d, s, id){*/
+/*     // Load the SDK asynchronously*/
+/*     (function(d, s, id) {*/
 /*         var js, fjs = d.getElementsByTagName(s)[0];*/
-/*         if (d.getElementById(id)) {return;}*/
+/*         if (d.getElementById(id)) return;*/
 /*         js = d.createElement(s); js.id = id;*/
 /*         js.src = "//connect.facebook.net/en_US/sdk.js";*/
 /*         fjs.parentNode.insertBefore(js, fjs);*/
 /*     }(document, 'script', 'facebook-jssdk'));*/
+/* */
+/*     // Here we run a very simple test of the Graph API after login is*/
+/*     // successful.  See statusChangeCallback() for when this call is made.*/
+/*     function testAPI() {*/
+/*         console.log('Welcome!  Fetching your information.... ');*/
+/*         FB.api('/me', function (response) {*/
+/*             console.log('Successful login for: ' + response.name);*/
+/*             document.getElementById('status').innerHTML =*/
+/*                     'Thanks for logging in, ' + response.name + '!';*/
+/*         });*/
+/*     }*/
 /* </script>*/
+/* <div*/
+/*         class="fb-like"*/
+/*         data-share="true"*/
+/*         data-width="450"*/
+/*         data-show-faces="true">*/
+/* </div>*/
 /* <div class="container">*/
 /*     <nav class="navbar navbar-default">*/
 /*         <div class="container-fluid">*/
@@ -398,7 +535,8 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 /*             <!-- Collect the nav links, forms, and other content for toggling -->*/
 /*             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*/
 /*                 <ul class="nav navbar-nav">*/
-/*                     <li><a href="create">Create</a></li>*/
+/*                     <li><a href="login">Login</a></li>*/
+/*                     <li><a href="register">Register</a></li>*/
 /*                     <li class="dropdown">*/
 /*                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"*/
 /*                            aria-expanded="false">Products type<span class="caret"></span>*/

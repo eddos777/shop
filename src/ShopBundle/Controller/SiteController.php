@@ -57,7 +57,16 @@ class SiteController extends Controller
                 return $this->redirectToRoute("site", [], Response::HTTP_CREATED);
             }
         }
-        return $this->render("ShopBundle:Site:create.html.twig", ['form' => $productForm->createView()]);
+
+        $types = Products::$types;
+        $categories = $em->getRepository("ShopBundle:Category")
+            ->findAll();
+        
+        return $this->render("ShopBundle:Site:create.html.twig", [
+            'form' => $productForm->createView(),
+            'categories' => $categories,
+            'types' => $types
+        ]);
 
 
     }

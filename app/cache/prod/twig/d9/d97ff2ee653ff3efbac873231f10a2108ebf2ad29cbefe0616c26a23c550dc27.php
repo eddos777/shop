@@ -35,36 +35,41 @@ class __TwigTemplate_4f1a375f1ab633426be9ef8a7aec5457ecbd053f8cf32850487693414cb
        ";
         // line 8
         echo "    </div>
+    <a href=\"";
+        // line 9
+        echo $this->env->getExtension('routing')->getPath("create");
+        echo "\" class=\"btn btn-success\">Create</a>
+    <div class=\"row\"></div>
     <table class=\"table table-condensed\">
         <tr>
             ";
-        // line 12
+        // line 14
         echo "            <th>";
         echo $this->env->getExtension('knp_pagination')->sortable($this->env, (isset($context["pagination"]) ? $context["pagination"] : null), "Id", "p.id");
         echo "</th>
             <th";
-        // line 13
+        // line 15
         if ($this->getAttribute((isset($context["pagination"]) ? $context["pagination"] : null), "isSorted", array(0 => "p.name"), "method")) {
             echo " class=\"sorted\"";
         }
         echo ">
                 ";
-        // line 14
+        // line 16
         echo $this->env->getExtension('knp_pagination')->sortable($this->env, (isset($context["pagination"]) ? $context["pagination"] : null), "Name", "p.name");
         echo "</th>
             <th>";
-        // line 15
+        // line 17
         echo $this->env->getExtension('knp_pagination')->sortable($this->env, (isset($context["pagination"]) ? $context["pagination"] : null), "Price", array(0 => "Price", 1 => "p.price"));
         echo "</th>
             <th>";
-        // line 16
+        // line 18
         echo $this->env->getExtension('knp_pagination')->sortable($this->env, (isset($context["pagination"]) ? $context["pagination"] : null), "Count", array(0 => "Count", 1 => "p.count"));
         echo "</th>
             <th>Actions</th>
         </tr>
 
         ";
-        // line 21
+        // line 23
         echo "        ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : null));
@@ -82,38 +87,38 @@ class __TwigTemplate_4f1a375f1ab633426be9ef8a7aec5457ecbd053f8cf32850487693414cb
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 22
+            // line 24
             echo "            <tr ";
             if (($this->getAttribute($context["loop"], "index", array()) % 2 == 1)) {
                 echo "class=\"color\"";
             }
             echo ">
                 <td>";
-            // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
-            echo "</td>
-                <td>";
             // line 25
-            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
+            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 27
+            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 28
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "count", array()), "html", null, true);
             echo "</td>
                 <td><a class=\"glyphicon glyphicon-eye-open\" href=\"/view?id=";
-            // line 27
+            // line 29
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
             echo "\" role=\"button\"></a>
                     <a class=\"glyphicon glyphicon-pencil\" href=\"/update?id=";
-            // line 28
+            // line 30
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
             echo "\" role=\"button\"></a>
                     <a class=\"glyphicon glyphicon-trash\" href=\"/delete?id=";
-            // line 29
+            // line 31
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "id", array()), "html", null, true);
             echo "\" role=\"button\"></a>
                 </td>
@@ -131,13 +136,13 @@ class __TwigTemplate_4f1a375f1ab633426be9ef8a7aec5457ecbd053f8cf32850487693414cb
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 35
         echo "    </table>
     ";
-        // line 35
+        // line 37
         echo "    <div class=\"navigation\">
         ";
-        // line 36
+        // line 38
         echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : null));
         echo "
     </div>
@@ -156,7 +161,7 @@ class __TwigTemplate_4f1a375f1ab633426be9ef8a7aec5457ecbd053f8cf32850487693414cb
 
     public function getDebugInfo()
     {
-        return array (  141 => 36,  138 => 35,  135 => 33,  117 => 29,  113 => 28,  109 => 27,  105 => 26,  101 => 25,  97 => 24,  93 => 23,  86 => 22,  68 => 21,  61 => 16,  57 => 15,  53 => 14,  47 => 13,  42 => 12,  37 => 8,  34 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  146 => 38,  143 => 37,  140 => 35,  122 => 31,  118 => 30,  114 => 29,  110 => 28,  106 => 27,  102 => 26,  98 => 25,  91 => 24,  73 => 23,  66 => 18,  62 => 17,  58 => 16,  52 => 15,  47 => 14,  40 => 9,  37 => 8,  34 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -167,6 +172,8 @@ class __TwigTemplate_4f1a375f1ab633426be9ef8a7aec5457ecbd053f8cf32850487693414cb
 /*     <div class="count">*/
 /*        {# {{ pagination.getTotalItemCount }} #}*/
 /*     </div>*/
+/*     <a href="{{ path("create") }}" class="btn btn-success">Create</a>*/
+/*     <div class="row"></div>*/
 /*     <table class="table table-condensed">*/
 /*         <tr>*/
 /*             {# sorting of properties based on query components #}*/

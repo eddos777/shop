@@ -32,9 +32,7 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
-        echo "    <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\"/>
+        echo "    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"images/favicon.ico\"/>
     <link rel=\"stylesheet\"
           href=\"";
         // line 9
@@ -71,22 +69,91 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
 </head>
 <body>
 <script>
+    // This is called with the results from from FB.getLoginStatus().
+    function statusChangeCallback(response) {
+        console.log('statusChangeCallback');
+        console.log(response);
+        // The response object is returned with a status field that lets the
+        // app know the current login status of the person.
+        // Full docs on the response object can be found in the documentation
+        // for FB.getLoginStatus().
+        if (response.status === '1601390663506352') {
+            // Logged into your app and Facebook.
+            testAPI();
+        } else if (response.status === 'not_authorized') {
+            // The person is logged into Facebook, but not your app.
+            document.getElementById('status').innerHTML = 'Please log ' +
+                    'into this app.';
+        } else {
+            // The person is not logged into Facebook, so we're not sure if
+            // they are logged into this app or not.
+            document.getElementById('status').innerHTML = 'Please log ' +
+                    'into Facebook.';
+        }
+    }
+
+    // This function is called when someone finishes with the Login
+    // Button.  See the onlogin handler attached to it in the sample
+    // code below.
+    function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+    }
+
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : 'your-app-id',
-            xfbml      : true,
-            version    : 'v2.5'
+            appId      : '{1601390663506352}',
+            cookie     : true,  // enable cookies to allow the server to access
+                                // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.6' // use version 2.2
         });
+
+        // Now that we've initialized the JavaScript SDK, we call
+        // FB.getLoginStatus().  This function gets the state of the
+        // person visiting this page and can return one of three states to
+        // the callback you provide.  They can be:
+        //
+        // 1. Logged into your app ('connected')
+        // 2. Logged into Facebook, but not your app ('not_authorized')
+        // 3. Not logged into Facebook and can't tell if they are logged into
+        //    your app or not.
+        //
+        // These three cases are handled in the callback function.
+
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
+
     };
 
-    (function(d, s, id){
+    // Load the SDK asynchronously
+    (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
+        if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = \"//connect.facebook.net/en_US/sdk.js\";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+
+    // Here we run a very simple test of the Graph API after login is
+    // successful.  See statusChangeCallback() for when this call is made.
+    function testAPI() {
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function (response) {
+            console.log('Successful login for: ' + response.name);
+            document.getElementById('status').innerHTML =
+                    'Thanks for logging in, ' + response.name + '!';
+        });
+    }
 </script>
+<div
+        class=\"fb-like\"
+        data-share=\"true\"
+        data-width=\"450\"
+        data-show-faces=\"true\">
+</div>
 <div class=\"container\">
     <nav class=\"navbar navbar-default\">
         <div class=\"container-fluid\">
@@ -105,7 +172,8 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                 <ul class=\"nav navbar-nav\">
-                    <li><a href=\"create\">Create</a></li>
+                    <li><a href=\"login\">Login</a></li>
+                    <li><a href=\"register\">Register</a></li>
                     <li class=\"dropdown\">
                         <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"
                            aria-expanded=\"false\">Products type<span class=\"caret\"></span>
@@ -131,12 +199,12 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
         </div><!-- /.container-fluid -->
     </nav>
     ";
-        // line 97
+        // line 167
         $this->displayBlock('body', $context, $blocks);
-        // line 98
+        // line 168
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 99
+        // line 169
         echo "</div>
 
 <footer id=\"aa-footer\">
@@ -232,11 +300,11 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
 </footer>
 
 <script src=\"";
-        // line 193
+        // line 263
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/jquery/dist/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 194
+        // line 264
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/bootstrap/dist/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <!-- SmartMenus jQuery plugin -->
@@ -264,7 +332,7 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        echo "Welcome!";
+        echo "Admin";
     }
 
     // line 6
@@ -272,12 +340,12 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
     {
     }
 
-    // line 97
+    // line 167
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 98
+    // line 168
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -294,16 +362,16 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
 
     public function getDebugInfo()
     {
-        return array (  281 => 98,  276 => 97,  271 => 6,  265 => 5,  240 => 194,  236 => 193,  140 => 99,  137 => 98,  135 => 97,  69 => 34,  41 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
+        return array (  349 => 168,  344 => 167,  339 => 6,  333 => 5,  308 => 264,  304 => 263,  208 => 169,  205 => 168,  203 => 167,  67 => 34,  39 => 9,  35 => 7,  33 => 6,  29 => 5,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
 /* <html>*/
 /* <head>*/
 /*     <meta charset="UTF-8"/>*/
-/*     <title>{% block title %}Welcome!{% endblock %}</title>*/
+/*     <title>{% block title %}Admin{% endblock %}</title>*/
 /*     {% block stylesheets %}{% endblock %}*/
-/*     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>*/
+/*     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>*/
 /*     <link rel="stylesheet"*/
 /*           href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}">*/
 /*     <meta http-equiv="X-UA-Compatible" content="IE=edge">*/
@@ -334,22 +402,91 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
 /* </head>*/
 /* <body>*/
 /* <script>*/
+/*     // This is called with the results from from FB.getLoginStatus().*/
+/*     function statusChangeCallback(response) {*/
+/*         console.log('statusChangeCallback');*/
+/*         console.log(response);*/
+/*         // The response object is returned with a status field that lets the*/
+/*         // app know the current login status of the person.*/
+/*         // Full docs on the response object can be found in the documentation*/
+/*         // for FB.getLoginStatus().*/
+/*         if (response.status === '1601390663506352') {*/
+/*             // Logged into your app and Facebook.*/
+/*             testAPI();*/
+/*         } else if (response.status === 'not_authorized') {*/
+/*             // The person is logged into Facebook, but not your app.*/
+/*             document.getElementById('status').innerHTML = 'Please log ' +*/
+/*                     'into this app.';*/
+/*         } else {*/
+/*             // The person is not logged into Facebook, so we're not sure if*/
+/*             // they are logged into this app or not.*/
+/*             document.getElementById('status').innerHTML = 'Please log ' +*/
+/*                     'into Facebook.';*/
+/*         }*/
+/*     }*/
+/* */
+/*     // This function is called when someone finishes with the Login*/
+/*     // Button.  See the onlogin handler attached to it in the sample*/
+/*     // code below.*/
+/*     function checkLoginState() {*/
+/*         FB.getLoginStatus(function(response) {*/
+/*             statusChangeCallback(response);*/
+/*         });*/
+/*     }*/
+/* */
 /*     window.fbAsyncInit = function() {*/
 /*         FB.init({*/
-/*             appId      : 'your-app-id',*/
-/*             xfbml      : true,*/
-/*             version    : 'v2.5'*/
+/*             appId      : '{1601390663506352}',*/
+/*             cookie     : true,  // enable cookies to allow the server to access*/
+/*                                 // the session*/
+/*             xfbml      : true,  // parse social plugins on this page*/
+/*             version    : 'v2.6' // use version 2.2*/
 /*         });*/
+/* */
+/*         // Now that we've initialized the JavaScript SDK, we call*/
+/*         // FB.getLoginStatus().  This function gets the state of the*/
+/*         // person visiting this page and can return one of three states to*/
+/*         // the callback you provide.  They can be:*/
+/*         //*/
+/*         // 1. Logged into your app ('connected')*/
+/*         // 2. Logged into Facebook, but not your app ('not_authorized')*/
+/*         // 3. Not logged into Facebook and can't tell if they are logged into*/
+/*         //    your app or not.*/
+/*         //*/
+/*         // These three cases are handled in the callback function.*/
+/* */
+/*         FB.getLoginStatus(function(response) {*/
+/*             statusChangeCallback(response);*/
+/*         });*/
+/* */
 /*     };*/
 /* */
-/*     (function(d, s, id){*/
+/*     // Load the SDK asynchronously*/
+/*     (function(d, s, id) {*/
 /*         var js, fjs = d.getElementsByTagName(s)[0];*/
-/*         if (d.getElementById(id)) {return;}*/
+/*         if (d.getElementById(id)) return;*/
 /*         js = d.createElement(s); js.id = id;*/
 /*         js.src = "//connect.facebook.net/en_US/sdk.js";*/
 /*         fjs.parentNode.insertBefore(js, fjs);*/
 /*     }(document, 'script', 'facebook-jssdk'));*/
+/* */
+/*     // Here we run a very simple test of the Graph API after login is*/
+/*     // successful.  See statusChangeCallback() for when this call is made.*/
+/*     function testAPI() {*/
+/*         console.log('Welcome!  Fetching your information.... ');*/
+/*         FB.api('/me', function (response) {*/
+/*             console.log('Successful login for: ' + response.name);*/
+/*             document.getElementById('status').innerHTML =*/
+/*                     'Thanks for logging in, ' + response.name + '!';*/
+/*         });*/
+/*     }*/
 /* </script>*/
+/* <div*/
+/*         class="fb-like"*/
+/*         data-share="true"*/
+/*         data-width="450"*/
+/*         data-show-faces="true">*/
+/* </div>*/
 /* <div class="container">*/
 /*     <nav class="navbar navbar-default">*/
 /*         <div class="container-fluid">*/
@@ -368,7 +505,8 @@ class __TwigTemplate_e277d7c0f03d9fa3ba0793db838420ff7012dbd5c518d066a6b8e943f9a
 /*             <!-- Collect the nav links, forms, and other content for toggling -->*/
 /*             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*/
 /*                 <ul class="nav navbar-nav">*/
-/*                     <li><a href="create">Create</a></li>*/
+/*                     <li><a href="login">Login</a></li>*/
+/*                     <li><a href="register">Register</a></li>*/
 /*                     <li class="dropdown">*/
 /*                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"*/
 /*                            aria-expanded="false">Products type<span class="caret"></span>*/

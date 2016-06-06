@@ -1,9 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
     {{ form_start(form) }}
     {{ form_widget(form) }}
+    <select>
+        {% for category in categories %}
+            <option value="{{ category.id }}" name="category_id">{{ category.name }}</option>
+        {% endfor %}
+    </select>
+    <select>
+        <option value="1" name="type_id">fewjfkejkl</option>
+        {#TODO#}
+        {% for i in types|length %}
+            <option value="{{ i }}" name="type_id">{{ types[i] }}</option>
+        {% endfor %}
+    </select>
 
-    <input type="submit" />
+    <input type="submit"/>
     {{ form_end(form) }}
 {% endblock %}

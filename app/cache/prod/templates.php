@@ -79,6 +79,8 @@
   'DoctrineBundle:Collector:explain.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig',
   'ShopBundle:categories:index.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\src\\ShopBundle/Resources/views/categories/index.html.twig',
   'ShopBundle:products:index.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\src\\ShopBundle/Resources/views/products/index.html.twig',
+  'ShopBundle:products:login.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\src\\ShopBundle/Resources/views/products/login.html.twig',
+  'ShopBundle:products:signup.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\src\\ShopBundle/Resources/views/products/signup.html.twig',
   'ShopBundle:site:create.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\src\\ShopBundle/Resources/views/site/create.html.twig',
   'ShopBundle:site:index.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\src\\ShopBundle/Resources/views/site/index.html.twig',
   'ShopBundle:site:update.html.twig' => 'C:\\xampp\\htdocs\\shop.ll\\src\\ShopBundle/Resources/views/site/update.html.twig',

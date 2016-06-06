@@ -10,6 +10,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "ShopBundle:Products:index.html.twig", 1);
         $this->blocks = array(
+            'head' => array($this, 'block_head'),
+            'title' => array($this, 'block_title'),
             'body' => array($this, 'block_body'),
         );
     }
@@ -21,22 +23,49 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6ad2cd34c1c5c6b244edb0086c6acd33b950e4b0cd66874bc9ae1644b038c3de = $this->env->getExtension("native_profiler");
-        $__internal_6ad2cd34c1c5c6b244edb0086c6acd33b950e4b0cd66874bc9ae1644b038c3de->enter($__internal_6ad2cd34c1c5c6b244edb0086c6acd33b950e4b0cd66874bc9ae1644b038c3de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ShopBundle:Products:index.html.twig"));
+        $__internal_0f6466574d8ed272ee7e1ed8ced3a9e9d630d6449b2112add81b3f9b3259a233 = $this->env->getExtension("native_profiler");
+        $__internal_0f6466574d8ed272ee7e1ed8ced3a9e9d630d6449b2112add81b3f9b3259a233->enter($__internal_0f6466574d8ed272ee7e1ed8ced3a9e9d630d6449b2112add81b3f9b3259a233_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ShopBundle:Products:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_6ad2cd34c1c5c6b244edb0086c6acd33b950e4b0cd66874bc9ae1644b038c3de->leave($__internal_6ad2cd34c1c5c6b244edb0086c6acd33b950e4b0cd66874bc9ae1644b038c3de_prof);
+        $__internal_0f6466574d8ed272ee7e1ed8ced3a9e9d630d6449b2112add81b3f9b3259a233->leave($__internal_0f6466574d8ed272ee7e1ed8ced3a9e9d630d6449b2112add81b3f9b3259a233_prof);
 
     }
 
     // line 3
+    public function block_head($context, array $blocks = array())
+    {
+        $__internal_e079f7813693ca82d58bb6323d521e922fbe675b67933cca22869d98cbe43c0a = $this->env->getExtension("native_profiler");
+        $__internal_e079f7813693ca82d58bb6323d521e922fbe675b67933cca22869d98cbe43c0a->enter($__internal_e079f7813693ca82d58bb6323d521e922fbe675b67933cca22869d98cbe43c0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head"));
+
+        echo "<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"images/favicon.ico\"/>
+    ";
+        
+        $__internal_e079f7813693ca82d58bb6323d521e922fbe675b67933cca22869d98cbe43c0a->leave($__internal_e079f7813693ca82d58bb6323d521e922fbe675b67933cca22869d98cbe43c0a_prof);
+
+    }
+
+    // line 6
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_e5fd3547914d0d8105b9db25f436acf2a1585d62312bf87346de9f93198db2c3 = $this->env->getExtension("native_profiler");
+        $__internal_e5fd3547914d0d8105b9db25f436acf2a1585d62312bf87346de9f93198db2c3->enter($__internal_e5fd3547914d0d8105b9db25f436acf2a1585d62312bf87346de9f93198db2c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Shop.ll";
+        echo "
+    ";
+        
+        $__internal_e5fd3547914d0d8105b9db25f436acf2a1585d62312bf87346de9f93198db2c3->leave($__internal_e5fd3547914d0d8105b9db25f436acf2a1585d62312bf87346de9f93198db2c3_prof);
+
+    }
+
+    // line 9
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b8e47162e9912cdced79a3b651cb4c83aea80627b39287c4e41c3e2852e4de0a = $this->env->getExtension("native_profiler");
-        $__internal_b8e47162e9912cdced79a3b651cb4c83aea80627b39287c4e41c3e2852e4de0a->enter($__internal_b8e47162e9912cdced79a3b651cb4c83aea80627b39287c4e41c3e2852e4de0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_4cb07d993a07f8033cc335206c1679ef5af82268d80d9aec1d604c923b8dca68 = $this->env->getExtension("native_profiler");
+        $__internal_4cb07d993a07f8033cc335206c1679ef5af82268d80d9aec1d604c923b8dca68->enter($__internal_4cb07d993a07f8033cc335206c1679ef5af82268d80d9aec1d604c923b8dca68_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 4
+        // line 10
         echo "
     <section id=\"aa-slider\">
         <div class=\"aa-slider-area\">
@@ -46,63 +75,62 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                         <!-- single slide item -->
                         <li>
                             <div class=\"seq-model\">
-                                <img data-seq src=\"img/slider/1.jpg\" alt=\"Men slide img\"/>
+                                <img data-seq src=\"images/130638.jpg\" alt=\"Men slide img\"/>
                             </div>
                             <div class=\"seq-title\">
-                                <span data-seq>Save Up to 75% Off</span>
-                                <h2 data-seq>Men Collection</h2>
-                                <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                                <span data-seq>PHONE</span>
+                                <h2 data-seq>PHONE</h2>
+                                <p data-seq>VERY GOOD SALE</p>
                                 <a data-seq href=\"#\" class=\"aa-shop-now-btn aa-secondary-btn\">SHOP NOW</a>
                             </div>
                         </li>
                         <!-- single slide item -->
                         <li>
                             <div class=\"seq-model\">
-                                <img data-seq src=\"img/slider/2.jpg\" alt=\"Wristwatch slide img\"/>
+                                <img data-seq src=\"images/132003.jpg\" alt=\"Wristwatch slide img\"/>
                             </div>
                             <div class=\"seq-title\">
                                 <span data-seq>Save Up to 40% Off</span>
-                                <h2 data-seq>Wristwatch Collection</h2>
-                                <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                                <h2 data-seq>NETBOOK</h2>
+                                <p data-seq>ASUS,LENOVO,OTHERS</p>
                                 <a data-seq href=\"#\" class=\"aa-shop-now-btn aa-secondary-btn\">SHOP NOW</a>
                             </div>
                         </li>
                         <!-- single slide item -->
                         <li>
                             <div class=\"seq-model\">
-                                <img data-seq src=\"img/slider/3.jpg\" alt=\"Women Jeans slide img\"/>
+                                <img data-seq src=\"images/dota-2.jpg\" alt=\"Women Jeans slide img\"/>
                             </div>
                             <div class=\"seq-title\">
                                 <span data-seq>Save Up to 75% Off</span>
-                                <h2 data-seq>Jeans Collection</h2>
-                                <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                                <h2 data-seq>GAMES</h2>
+                                <p data-seq>DOTA 2,LINEAGE,CS GO</p>
                                 <a data-seq href=\"#\" class=\"aa-shop-now-btn aa-secondary-btn\">SHOP NOW</a>
                             </div>
                         </li>
                         <!-- single slide item -->
                         <li>
                             <div class=\"seq-model\">
-                                <img data-seq src=\"img/slider/4.jpg\" alt=\"Shoes slide img\"/>
+                                <img data-seq src=\"images/132500.jpg\" alt=\"Shoes slide img\"/>
                             </div>
                             <div class=\"seq-title\">
                                 <span data-seq>Save Up to 75% Off</span>
-                                <h2 data-seq>Exclusive Shoes</h2>
-                                <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                                <h2 data-seq>TV</h2>
+                                <p data-seq>COMMON</p>
+                                <a data-seq href=\"#\" class=\"aa-shop-now-btn aa-secondary-btn\">SHOP NOW</a>
+                            </div>
+                        </li><li>
+                            <div class=\"seq-model\">
+                                <img data-seq src=\"images/130883.jpg\" alt=\"Shoes slide img\"/>
+                            </div>
+                            <div class=\"seq-title\">
+                                <span data-seq>Save Up to 75% Off</span>
+                                <h2 data-seq>Tablets</h2>
+                                <p data-seq>COMMON</p>
                                 <a data-seq href=\"#\" class=\"aa-shop-now-btn aa-secondary-btn\">SHOP NOW</a>
                             </div>
                         </li>
                         <!-- single slide item -->
-                        <li>
-                            <div class=\"seq-model\">
-                                <img data-seq src=\"img/slider/5.jpg\" alt=\"Male Female slide img\"/>
-                            </div>
-                            <div class=\"seq-title\">
-                                <span data-seq>Save Up to 50% Off</span>
-                                <h2 data-seq>Best Collection</h2>
-                                <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
-                                <a data-seq href=\"#\" class=\"aa-shop-now-btn aa-secondary-btn\">SHOP NOW</a>
-                            </div>
-                        </li>
                     </ul>
                 </div>
                 <!-- slider navigation btn -->
@@ -123,9 +151,9 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                             <div class=\"col-md-5 no-padding\">
                                 <div class=\"aa-promo-left\">
                                     <div class=\"aa-promo-banner\">
-                                        <img src=\"img/promo-banner-1.jpg\" alt=\"img\">
+                                        <img src=\"images/130638.jpg\" alt=\"img\">
                                         <div class=\"aa-prom-content\">
-                                            <span>75% Off</span>
+                                            <span>PHONE</span>
                                             <h4><a href=\"#\">For Women</a></h4>
                                         </div>
                                     </div>
@@ -136,7 +164,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                 <div class=\"aa-promo-right\">
                                     <div class=\"aa-single-promo-right\">
                                         <div class=\"aa-promo-banner\">
-                                            <img src=\"img/promo-banner-3.jpg\" alt=\"img\">
+                                            <img src=\"images/132003.jpg\" alt=\"img\">
                                             <div class=\"aa-prom-content\">
                                                 <span>Exclusive Item</span>
                                                 <h4><a href=\"#\">For Men</a></h4>
@@ -144,32 +172,17 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                         </div>
                                     </div>
                                     <div class=\"aa-single-promo-right\">
-                                        ";
-        // line 111
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
-        foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 112
-            echo "                                            <div class=\"aa-promo-banner\">
-                                                <img src=\"img/promo-banner-2.jpg\" alt=\"img\">
+                                            <div class=\"aa-promo-banner\">
+                                                <img src=\"images/130883.jpg\" alt=\"img\">
                                                 <div class=\"aa-prom-content\">
-                                                    <span>";
-            // line 115
-            echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "type", array()), "html", null, true);
-            echo "</span>
+                                                    <span>fds</span>
                                                     <h4><a href=\"#\">On Shoes</a></h4>
                                                 </div>
                                             </div>
-                                        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 120
-        echo "                                    </div>
+                                    </div>
                                     <div class=\"aa-single-promo-right\">
                                         <div class=\"aa-promo-banner\">
-                                            <img src=\"img/promo-banner-4.jpg\" alt=\"img\">
+                                            <img src=\"images/dota-2.jpg\" alt=\"img\">
                                             <div class=\"aa-prom-content\">
                                                 <span>New Arrivals</span>
                                                 <h4><a href=\"#\">For Kids</a></h4>
@@ -178,7 +191,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                     </div>
                                     <div class=\"aa-single-promo-right\">
                                         <div class=\"aa-promo-banner\">
-                                            <img src=\"img/promo-banner-5.jpg\" alt=\"img\">
+                                            <img src=\"images/132500.jpg\" alt=\"img\">
                                             <div class=\"aa-prom-content\">
                                                 <span>25% Off</span>
                                                 <h4><a href=\"#\">For Bags</a></h4>
@@ -204,40 +217,63 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                             <div class=\"aa-product-inner\">
                                 <!-- start prduct navigation -->
                                 <ul class=\"nav nav-tabs aa-products-tab\">
-                                    <li class=\"active\"><a href=\"#men\" data-toggle=\"tab\">Men</a></li>
-                                    <li><a href=\"#women\" data-toggle=\"tab\">Women</a></li>
-                                    <li><a href=\"#sports\" data-toggle=\"tab\">Sports</a></li>
-                                    <li><a href=\"#electronics\" data-toggle=\"tab\">Electronics</a></li>
-                                </ul>
+                                    ";
+        // line 161
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")));
+        foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
+            // line 162
+            echo "                                        <li><a href=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
+            echo "\" data-toggle=\"tab\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
+            echo "</a></li>
+                                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 164
+        echo "                                </ul>
                                 <!-- Tab panes -->
                                 <div class=\"tab-content\">
                                     <!-- Start men product category -->
                                     <div class=\"tab-pane fade in active\" id=\"men\">
                                         <ul class=\"aa-product-catg\">
                                             ";
-        // line 168
+        // line 170
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 169
-            echo "                                                <li>
+            // line 171
+            echo "                                                <li class=\"col-sm-4\">
                                                     <figure>
-                                                        <a class=\"aa-product-img\" href=\"#\"><img
-                                                                    src=\"img/man/polo-shirt-2.png\" alt=\"polo shirt img\"></a>
-                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
+                                                        ";
+            // line 174
+            echo "                                                        ";
+            // line 175
+            echo "                                                            ";
+            // line 176
+            echo "                                                                 ";
+            // line 177
+            echo "                                                                 ";
+            // line 178
+            echo "                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
                                                                     class=\"fa fa-shopping-cart\"></span>Add To Cart</a>
                                                         <figcaption>
                                                             <h4 class=\"aa-product-title\"><a
                                                                         href=\"#\">";
-            // line 177
+            // line 182
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></h4>
                                                             <span class=\"aa-product-price\">";
-            // line 178
+            // line 183
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
-            echo "</span><span
-                                                                    class=\"aa-product-price\"><del>";
-            // line 179
+            echo "
+                                                            </span>
+                                                            <span class=\"aa-product-price\">
+                                                                <del>";
+            // line 186
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</del></span>
                                                         </figcaption>
@@ -255,7 +291,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                     </div>
                                                     <!-- product badge -->
                                                     <span class=\"aa-badge aa-sale\" href=\"#\">";
-            // line 194
+            // line 201
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "type", array()), "html", null, true);
             echo "</span>
                                                 </li>
@@ -265,9 +301,9 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 198
+        // line 205
         echo "                                        </ul>
-                                        <a class=\"aa-browse-btn\" href=\"#\">Browse all Product <span
+                                        <a class=\"aa-browse-btn\" href=\"#\">Browse next products <span
                                                     class=\"fa fa-long-arrow-right\"></span></a>
                                     </div>
                                     <!-- / women product category -->
@@ -275,30 +311,35 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                     <div class=\"tab-pane fade\" id=\"sports\">
                                         <ul class=\"aa-product-catg\">
                                             ";
-        // line 206
+        // line 213
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 207
-            echo "                                                <li>
+            // line 214
+            echo "                                                <li class=\"col-sm-4\">
                                                     <figure>
-                                                        <a class=\"aa-product-img\" href=\"#\"><img
-                                                                    src=\"img/sports/sport-1.png\"
-                                                                    alt=\"polo shirt img\"></a>
-                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
+                                                        ";
+            // line 217
+            echo "                                                        ";
+            // line 218
+            echo "                                                                    ";
+            // line 219
+            echo "                                                                    ";
+            // line 220
+            echo "                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
                                                                     class=\"fa fa-shopping-cart\"></span>Add To Cart</a>
                                                         <figcaption>
                                                             <h4 class=\"aa-product-title\"><a
                                                                         href=\"#\">";
-            // line 216
+            // line 224
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></h4>
                                                             <span class=\"aa-product-price\">";
-            // line 217
+            // line 225
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</span><span
                                                                     class=\"aa-product-price\"><del>";
-            // line 218
+            // line 226
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</del></span>
                                                         </figcaption>
@@ -316,7 +357,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                     </div>
                                                     <!-- product badge -->
                                                     <span class=\"aa-badge aa-sale\" href=\"#\">";
-            // line 233
+            // line 241
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "type", array()), "html", null, true);
             echo "</span>
                                                 </li>
@@ -325,7 +366,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 236
+        // line 244
         echo "                                        </ul>
                                     </div>
                                     <!-- / sports product category -->
@@ -333,34 +374,40 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                     <div class=\"tab-pane fade\" id=\"electronics\">
                                         <ul class=\"aa-product-catg\">
                                             ";
-        // line 242
+        // line 250
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 243
-            echo "                                                <li>
+            // line 251
+            echo "                                                <li class=\"col-sm-4\">
                                                     <figure>
-                                                        <a class=\"aa-product-img\" href=\"#\"><img
-                                                                    src=\"img/electronics/electronic-1.png\"
-                                                                    alt=\"polo shirt img\"></a>
-                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
+                                                        ";
+            // line 254
+            echo "                                                        ";
+            // line 255
+            echo "                                                                    ";
+            // line 256
+            echo "                                                                    ";
+            // line 257
+            echo "                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
                                                                     class=\"fa fa-shopping-cart\"></span>Add To Cart</a>
                                                         <figcaption>
                                                             <h4 class=\"aa-product-title\"><a
                                                                         href=\"#\">";
-            // line 252
+            // line 261
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></h4>
                                                             <span class=\"aa-product-price\">";
-            // line 253
+            // line 262
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</span><span
                                                                     class=\"aa-product-price\"><del>";
-            // line 254
+            // line 263
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</del></span>
                                                         </figcaption>
                                                     </figure>
+
                                                     <div class=\"aa-product-hvr-content\">
                                                         <a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\"
                                                            title=\"Add to Wishlist\"><span
@@ -374,7 +421,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                     </div>
                                                     <!-- product badge -->
                                                     <span class=\"aa-badge aa-sale\" href=\"#\">";
-            // line 269
+            // line 279
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "type", array()), "html", null, true);
             echo "</span>
                                                 </li>
@@ -383,7 +430,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 272
+        // line 282
         echo "                                        </ul>
                                         <a class=\"aa-browse-btn\" href=\"#\">Browse all Product <span
                                                     class=\"fa fa-long-arrow-right\"></span></a>
@@ -406,28 +453,28 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                                 <div class=\"simpleLens-container\">
                                                                     <div class=\"simpleLens-big-image-container\">
                                                                         <a class=\"simpleLens-lens-image\"
-                                                                           data-lens-image=\"img/view-slider/large/polo-shirt-1.png\">
-                                                                            <img src=\"img/view-slider/medium/polo-shirt-1.png\"
+                                                                           data-lens-image=\"images/l2560.jpg\">
+                                                                            <img src=\"images/l2560.jpg\"
                                                                                  class=\"simpleLens-big-image\">
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class=\"simpleLens-thumbnails-container\">
                                                                     <a href=\"#\" class=\"simpleLens-thumbnail-wrapper\"
-                                                                       data-lens-image=\"img/view-slider/large/polo-shirt-1.png\"
-                                                                       data-big-image=\"img/view-slider/medium/polo-shirt-1.png\">
-                                                                        <img src=\"img/view-slider/thumbnail/polo-shirt-1.png\">
+                                                                       data-lens-image=\"images/_72147500589.jpg\"
+                                                                       data-big-image=\"images/l2560.jpg\">
+                                                                        <img src=\"images/_72147500589.jpg\">
                                                                     </a>
                                                                     <a href=\"#\" class=\"simpleLens-thumbnail-wrapper\"
-                                                                       data-lens-image=\"img/view-slider/large/polo-shirt-3.png\"
-                                                                       data-big-image=\"img/view-slider/medium/polo-shirt-3.png\">
-                                                                        <img src=\"img/view-slider/thumbnail/polo-shirt-3.png\">
+                                                                       data-lens-image=\"images/9aef2ea7a97b04929fa0e75ba18f4c69.jpg\"
+                                                                       data-big-image=\"images/l2560.jpg\">
+                                                                        <img src=\"images/l2560.jpg\">
                                                                     </a>
 
                                                                     <a href=\"#\" class=\"simpleLens-thumbnail-wrapper\"
                                                                        data-lens-image=\"img/view-slider/large/polo-shirt-4.png\"
-                                                                       data-big-image=\"img/view-slider/medium/polo-shirt-4.png\">
-                                                                        <img src=\"img/view-slider/thumbnail/polo-shirt-4.png\">
+                                                                       data-big-image=\"images/l2560.jpg\">
+                                                                        <img src=\"images/l2560.jpg\">
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -468,7 +515,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                                 </p>
                                                             </div>
                                                             <div class=\"aa-prod-view-bottom\">
-                                                                <a href=\"#\" class=\"aa-add-to-cart-btn\"><span
+                                                                <a href=\"\" class=\"aa-add-to-cart-btn\"><span
                                                                             class=\"fa fa-shopping-cart\"></span>Add To
                                                                     Cart</a>
                                                                 <a href=\"#\" class=\"aa-add-to-cart-btn\">View Details</a>
@@ -490,7 +537,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 
 ";
         
-        $__internal_b8e47162e9912cdced79a3b651cb4c83aea80627b39287c4e41c3e2852e4de0a->leave($__internal_b8e47162e9912cdced79a3b651cb4c83aea80627b39287c4e41c3e2852e4de0a_prof);
+        $__internal_4cb07d993a07f8033cc335206c1679ef5af82268d80d9aec1d604c923b8dca68->leave($__internal_4cb07d993a07f8033cc335206c1679ef5af82268d80d9aec1d604c923b8dca68_prof);
 
     }
 
@@ -506,10 +553,16 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 
     public function getDebugInfo()
     {
-        return array (  387 => 272,  378 => 269,  360 => 254,  356 => 253,  352 => 252,  341 => 243,  337 => 242,  329 => 236,  320 => 233,  302 => 218,  298 => 217,  294 => 216,  283 => 207,  279 => 206,  269 => 198,  259 => 194,  241 => 179,  237 => 178,  233 => 177,  223 => 169,  219 => 168,  169 => 120,  158 => 115,  153 => 112,  149 => 111,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  434 => 282,  425 => 279,  406 => 263,  402 => 262,  398 => 261,  392 => 257,  390 => 256,  388 => 255,  386 => 254,  382 => 251,  378 => 250,  370 => 244,  361 => 241,  343 => 226,  339 => 225,  335 => 224,  329 => 220,  327 => 219,  325 => 218,  323 => 217,  319 => 214,  315 => 213,  305 => 205,  295 => 201,  277 => 186,  271 => 183,  267 => 182,  261 => 178,  259 => 177,  257 => 176,  255 => 175,  253 => 174,  249 => 171,  245 => 170,  237 => 164,  226 => 162,  222 => 161,  69 => 10,  63 => 9,  49 => 6,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
+/* */
+/* {% block head %}<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>*/
+/*     {% endblock %}*/
+/* */
+/* {% block title %}{{ "Shop.ll" }}*/
+/*     {% endblock %}*/
 /* */
 /* {% block body %}*/
 /* */
@@ -521,63 +574,62 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                         <!-- single slide item -->*/
 /*                         <li>*/
 /*                             <div class="seq-model">*/
-/*                                 <img data-seq src="img/slider/1.jpg" alt="Men slide img"/>*/
+/*                                 <img data-seq src="images/130638.jpg" alt="Men slide img"/>*/
 /*                             </div>*/
 /*                             <div class="seq-title">*/
-/*                                 <span data-seq>Save Up to 75% Off</span>*/
-/*                                 <h2 data-seq>Men Collection</h2>*/
-/*                                 <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>*/
+/*                                 <span data-seq>PHONE</span>*/
+/*                                 <h2 data-seq>PHONE</h2>*/
+/*                                 <p data-seq>VERY GOOD SALE</p>*/
 /*                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>*/
 /*                             </div>*/
 /*                         </li>*/
 /*                         <!-- single slide item -->*/
 /*                         <li>*/
 /*                             <div class="seq-model">*/
-/*                                 <img data-seq src="img/slider/2.jpg" alt="Wristwatch slide img"/>*/
+/*                                 <img data-seq src="images/132003.jpg" alt="Wristwatch slide img"/>*/
 /*                             </div>*/
 /*                             <div class="seq-title">*/
 /*                                 <span data-seq>Save Up to 40% Off</span>*/
-/*                                 <h2 data-seq>Wristwatch Collection</h2>*/
-/*                                 <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>*/
+/*                                 <h2 data-seq>NETBOOK</h2>*/
+/*                                 <p data-seq>ASUS,LENOVO,OTHERS</p>*/
 /*                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>*/
 /*                             </div>*/
 /*                         </li>*/
 /*                         <!-- single slide item -->*/
 /*                         <li>*/
 /*                             <div class="seq-model">*/
-/*                                 <img data-seq src="img/slider/3.jpg" alt="Women Jeans slide img"/>*/
+/*                                 <img data-seq src="images/dota-2.jpg" alt="Women Jeans slide img"/>*/
 /*                             </div>*/
 /*                             <div class="seq-title">*/
 /*                                 <span data-seq>Save Up to 75% Off</span>*/
-/*                                 <h2 data-seq>Jeans Collection</h2>*/
-/*                                 <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>*/
+/*                                 <h2 data-seq>GAMES</h2>*/
+/*                                 <p data-seq>DOTA 2,LINEAGE,CS GO</p>*/
 /*                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>*/
 /*                             </div>*/
 /*                         </li>*/
 /*                         <!-- single slide item -->*/
 /*                         <li>*/
 /*                             <div class="seq-model">*/
-/*                                 <img data-seq src="img/slider/4.jpg" alt="Shoes slide img"/>*/
+/*                                 <img data-seq src="images/132500.jpg" alt="Shoes slide img"/>*/
 /*                             </div>*/
 /*                             <div class="seq-title">*/
 /*                                 <span data-seq>Save Up to 75% Off</span>*/
-/*                                 <h2 data-seq>Exclusive Shoes</h2>*/
-/*                                 <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>*/
+/*                                 <h2 data-seq>TV</h2>*/
+/*                                 <p data-seq>COMMON</p>*/
+/*                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>*/
+/*                             </div>*/
+/*                         </li><li>*/
+/*                             <div class="seq-model">*/
+/*                                 <img data-seq src="images/130883.jpg" alt="Shoes slide img"/>*/
+/*                             </div>*/
+/*                             <div class="seq-title">*/
+/*                                 <span data-seq>Save Up to 75% Off</span>*/
+/*                                 <h2 data-seq>Tablets</h2>*/
+/*                                 <p data-seq>COMMON</p>*/
 /*                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>*/
 /*                             </div>*/
 /*                         </li>*/
 /*                         <!-- single slide item -->*/
-/*                         <li>*/
-/*                             <div class="seq-model">*/
-/*                                 <img data-seq src="img/slider/5.jpg" alt="Male Female slide img"/>*/
-/*                             </div>*/
-/*                             <div class="seq-title">*/
-/*                                 <span data-seq>Save Up to 50% Off</span>*/
-/*                                 <h2 data-seq>Best Collection</h2>*/
-/*                                 <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>*/
-/*                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>*/
-/*                             </div>*/
-/*                         </li>*/
 /*                     </ul>*/
 /*                 </div>*/
 /*                 <!-- slider navigation btn -->*/
@@ -598,9 +650,9 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                             <div class="col-md-5 no-padding">*/
 /*                                 <div class="aa-promo-left">*/
 /*                                     <div class="aa-promo-banner">*/
-/*                                         <img src="img/promo-banner-1.jpg" alt="img">*/
+/*                                         <img src="images/130638.jpg" alt="img">*/
 /*                                         <div class="aa-prom-content">*/
-/*                                             <span>75% Off</span>*/
+/*                                             <span>PHONE</span>*/
 /*                                             <h4><a href="#">For Women</a></h4>*/
 /*                                         </div>*/
 /*                                     </div>*/
@@ -611,7 +663,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                 <div class="aa-promo-right">*/
 /*                                     <div class="aa-single-promo-right">*/
 /*                                         <div class="aa-promo-banner">*/
-/*                                             <img src="img/promo-banner-3.jpg" alt="img">*/
+/*                                             <img src="images/132003.jpg" alt="img">*/
 /*                                             <div class="aa-prom-content">*/
 /*                                                 <span>Exclusive Item</span>*/
 /*                                                 <h4><a href="#">For Men</a></h4>*/
@@ -619,19 +671,17 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                         </div>*/
 /*                                     </div>*/
 /*                                     <div class="aa-single-promo-right">*/
-/*                                         {% for product in products %}*/
 /*                                             <div class="aa-promo-banner">*/
-/*                                                 <img src="img/promo-banner-2.jpg" alt="img">*/
+/*                                                 <img src="images/130883.jpg" alt="img">*/
 /*                                                 <div class="aa-prom-content">*/
-/*                                                     <span>{{ product.type }}</span>*/
+/*                                                     <span>fds</span>*/
 /*                                                     <h4><a href="#">On Shoes</a></h4>*/
 /*                                                 </div>*/
 /*                                             </div>*/
-/*                                         {% endfor %}*/
 /*                                     </div>*/
 /*                                     <div class="aa-single-promo-right">*/
 /*                                         <div class="aa-promo-banner">*/
-/*                                             <img src="img/promo-banner-4.jpg" alt="img">*/
+/*                                             <img src="images/dota-2.jpg" alt="img">*/
 /*                                             <div class="aa-prom-content">*/
 /*                                                 <span>New Arrivals</span>*/
 /*                                                 <h4><a href="#">For Kids</a></h4>*/
@@ -640,7 +690,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                     </div>*/
 /*                                     <div class="aa-single-promo-right">*/
 /*                                         <div class="aa-promo-banner">*/
-/*                                             <img src="img/promo-banner-5.jpg" alt="img">*/
+/*                                             <img src="images/132500.jpg" alt="img">*/
 /*                                             <div class="aa-prom-content">*/
 /*                                                 <span>25% Off</span>*/
 /*                                                 <h4><a href="#">For Bags</a></h4>*/
@@ -666,10 +716,9 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                             <div class="aa-product-inner">*/
 /*                                 <!-- start prduct navigation -->*/
 /*                                 <ul class="nav nav-tabs aa-products-tab">*/
-/*                                     <li class="active"><a href="#men" data-toggle="tab">Men</a></li>*/
-/*                                     <li><a href="#women" data-toggle="tab">Women</a></li>*/
-/*                                     <li><a href="#sports" data-toggle="tab">Sports</a></li>*/
-/*                                     <li><a href="#electronics" data-toggle="tab">Electronics</a></li>*/
+/*                                     {% for category in categories %}*/
+/*                                         <li><a href="{{ category.name }}" data-toggle="tab">{{ category.name }}</a></li>*/
+/*                                     {% endfor %}*/
 /*                                 </ul>*/
 /*                                 <!-- Tab panes -->*/
 /*                                 <div class="tab-content">*/
@@ -677,17 +726,22 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                     <div class="tab-pane fade in active" id="men">*/
 /*                                         <ul class="aa-product-catg">*/
 /*                                             {% for product in products %}*/
-/*                                                 <li>*/
+/*                                                 <li class="col-sm-4">*/
 /*                                                     <figure>*/
-/*                                                         <a class="aa-product-img" href="#"><img*/
-/*                                                                     src="img/man/polo-shirt-2.png" alt="polo shirt img"></a>*/
+/*                                                         {#TODO#}*/
+/*                                                         {#<a class="aa-product-img" href="#">#}*/
+/*                                                             {#<img class="img-thumbnail"#}*/
+/*                                                                  {#src="{{ product.images[0].uri }}"#}*/
+/*                                                                  {#alt="polo shirt img"></a>#}*/
 /*                                                         <a class="aa-add-card-btn" href="#"><span*/
 /*                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>*/
 /*                                                         <figcaption>*/
 /*                                                             <h4 class="aa-product-title"><a*/
 /*                                                                         href="#">{{ product.name }}</a></h4>*/
-/*                                                             <span class="aa-product-price">{{ product.price }}</span><span*/
-/*                                                                     class="aa-product-price"><del>{{ product.price }}</del></span>*/
+/*                                                             <span class="aa-product-price">{{ product.price }}*/
+/*                                                             </span>*/
+/*                                                             <span class="aa-product-price">*/
+/*                                                                 <del>{{ product.price }}</del></span>*/
 /*                                                         </figcaption>*/
 /*                                                     </figure>*/
 /*                                                     <div class="aa-product-hvr-content">*/
@@ -707,7 +761,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                 <!-- start single product item -->*/
 /*                                             {% endfor %}*/
 /*                                         </ul>*/
-/*                                         <a class="aa-browse-btn" href="#">Browse all Product <span*/
+/*                                         <a class="aa-browse-btn" href="#">Browse next products <span*/
 /*                                                     class="fa fa-long-arrow-right"></span></a>*/
 /*                                     </div>*/
 /*                                     <!-- / women product category -->*/
@@ -715,11 +769,12 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                     <div class="tab-pane fade" id="sports">*/
 /*                                         <ul class="aa-product-catg">*/
 /*                                             {% for product in products %}*/
-/*                                                 <li>*/
+/*                                                 <li class="col-sm-4">*/
 /*                                                     <figure>*/
-/*                                                         <a class="aa-product-img" href="#"><img*/
-/*                                                                     src="img/sports/sport-1.png"*/
-/*                                                                     alt="polo shirt img"></a>*/
+/*                                                         {#TODO#}*/
+/*                                                         {#<a class="aa-product-img" href="#"><img#}*/
+/*                                                                     {#src="{{ product.images[0].uri }}"#}*/
+/*                                                                     {#alt="polo shirt img"></a>#}*/
 /*                                                         <a class="aa-add-card-btn" href="#"><span*/
 /*                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>*/
 /*                                                         <figcaption>*/
@@ -751,11 +806,12 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                     <div class="tab-pane fade" id="electronics">*/
 /*                                         <ul class="aa-product-catg">*/
 /*                                             {% for product in products %}*/
-/*                                                 <li>*/
+/*                                                 <li class="col-sm-4">*/
 /*                                                     <figure>*/
-/*                                                         <a class="aa-product-img" href="#"><img*/
-/*                                                                     src="img/electronics/electronic-1.png"*/
-/*                                                                     alt="polo shirt img"></a>*/
+/*                                                         {#TODO#}*/
+/*                                                         {#<a class="aa-product-img" href="#"><img#}*/
+/*                                                                     {#src="{{ product.images[0].uri }}"#}*/
+/*                                                                     {#alt="polo shirt img"></a>#}*/
 /*                                                         <a class="aa-add-card-btn" href="#"><span*/
 /*                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>*/
 /*                                                         <figcaption>*/
@@ -765,6 +821,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                                     class="aa-product-price"><del>{{ product.price }}</del></span>*/
 /*                                                         </figcaption>*/
 /*                                                     </figure>*/
+/* */
 /*                                                     <div class="aa-product-hvr-content">*/
 /*                                                         <a href="#" data-toggle="tooltip" data-placement="top"*/
 /*                                                            title="Add to Wishlist"><span*/
@@ -802,28 +859,28 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                                 <div class="simpleLens-container">*/
 /*                                                                     <div class="simpleLens-big-image-container">*/
 /*                                                                         <a class="simpleLens-lens-image"*/
-/*                                                                            data-lens-image="img/view-slider/large/polo-shirt-1.png">*/
-/*                                                                             <img src="img/view-slider/medium/polo-shirt-1.png"*/
+/*                                                                            data-lens-image="images/l2560.jpg">*/
+/*                                                                             <img src="images/l2560.jpg"*/
 /*                                                                                  class="simpleLens-big-image">*/
 /*                                                                         </a>*/
 /*                                                                     </div>*/
 /*                                                                 </div>*/
 /*                                                                 <div class="simpleLens-thumbnails-container">*/
 /*                                                                     <a href="#" class="simpleLens-thumbnail-wrapper"*/
-/*                                                                        data-lens-image="img/view-slider/large/polo-shirt-1.png"*/
-/*                                                                        data-big-image="img/view-slider/medium/polo-shirt-1.png">*/
-/*                                                                         <img src="img/view-slider/thumbnail/polo-shirt-1.png">*/
+/*                                                                        data-lens-image="images/_72147500589.jpg"*/
+/*                                                                        data-big-image="images/l2560.jpg">*/
+/*                                                                         <img src="images/_72147500589.jpg">*/
 /*                                                                     </a>*/
 /*                                                                     <a href="#" class="simpleLens-thumbnail-wrapper"*/
-/*                                                                        data-lens-image="img/view-slider/large/polo-shirt-3.png"*/
-/*                                                                        data-big-image="img/view-slider/medium/polo-shirt-3.png">*/
-/*                                                                         <img src="img/view-slider/thumbnail/polo-shirt-3.png">*/
+/*                                                                        data-lens-image="images/9aef2ea7a97b04929fa0e75ba18f4c69.jpg"*/
+/*                                                                        data-big-image="images/l2560.jpg">*/
+/*                                                                         <img src="images/l2560.jpg">*/
 /*                                                                     </a>*/
 /* */
 /*                                                                     <a href="#" class="simpleLens-thumbnail-wrapper"*/
 /*                                                                        data-lens-image="img/view-slider/large/polo-shirt-4.png"*/
-/*                                                                        data-big-image="img/view-slider/medium/polo-shirt-4.png">*/
-/*                                                                         <img src="img/view-slider/thumbnail/polo-shirt-4.png">*/
+/*                                                                        data-big-image="images/l2560.jpg">*/
+/*                                                                         <img src="images/l2560.jpg">*/
 /*                                                                     </a>*/
 /*                                                                 </div>*/
 /*                                                             </div>*/
@@ -864,7 +921,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                                 </p>*/
 /*                                                             </div>*/
 /*                                                             <div class="aa-prod-view-bottom">*/
-/*                                                                 <a href="#" class="aa-add-to-cart-btn"><span*/
+/*                                                                 <a href="" class="aa-add-to-cart-btn"><span*/
 /*                                                                             class="fa fa-shopping-cart"></span>Add To*/
 /*                                                                     Cart</a>*/
 /*                                                                 <a href="#" class="aa-add-to-cart-btn">View Details</a>*/

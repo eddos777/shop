@@ -28,17 +28,57 @@ class __TwigTemplate_5cd4f2229f279f04680159573957c251759a9525ea58be11d073a1b8c46
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "    ";
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form_start');
         echo "
     ";
         // line 5
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form_start');
+        echo "
+    ";
+        // line 6
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : null), 'widget');
         echo "
-
-    <input type=\"submit\" />
-    ";
+    <select>
+        ";
         // line 8
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
+            // line 9
+            echo "            <option value=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "id", array()), "html", null, true);
+            echo "\" name=\"category_id\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
+            echo "</option>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 11
+        echo "    </select>
+    <select>
+        ";
+        // line 13
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_length_filter($this->env, (isset($context["types"]) ? $context["types"] : null)));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 14
+            echo "            <option value=\"";
+            echo twig_escape_filter($this->env, $context["i"], "html", null, true);
+            echo "\" name=\"type_id\">";
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["types"]) ? $context["types"] : null), $context["i"], array(), "array"), "html", null, true);
+            echo "</option>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 16
+        echo "    </select>
+
+    <input type=\"submit\"/>
+    ";
+        // line 19
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form_end');
         echo "
 ";
@@ -56,15 +96,26 @@ class __TwigTemplate_5cd4f2229f279f04680159573957c251759a9525ea58be11d073a1b8c46
 
     public function getDebugInfo()
     {
-        return array (  42 => 8,  36 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  82 => 19,  77 => 16,  66 => 14,  62 => 13,  58 => 11,  47 => 9,  43 => 8,  38 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
 /* */
 /* {% block body %}*/
+/* */
 /*     {{ form_start(form) }}*/
 /*     {{ form_widget(form) }}*/
+/*     <select>*/
+/*         {% for category in categories %}*/
+/*             <option value="{{ category.id }}" name="category_id">{{ category.name }}</option>*/
+/*         {% endfor %}*/
+/*     </select>*/
+/*     <select>*/
+/*         {% for i in types|length %}*/
+/*             <option value="{{ i }}" name="type_id">{{ types[i] }}</option>*/
+/*         {% endfor %}*/
+/*     </select>*/
 /* */
-/*     <input type="submit" />*/
+/*     <input type="submit"/>*/
 /*     {{ form_end(form) }}*/
 /* {% endblock %}*/

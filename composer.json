@@ -6,10 +6,12 @@
     "autoload": {
         "psr-4": { "": "src/" }
     },
+
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.7.*",
         "doctrine/orm": "^2.4.8",
+        "facebook/php-sdk-v4" : "*",
         "doctrine/doctrine-bundle": "~1.4",
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
