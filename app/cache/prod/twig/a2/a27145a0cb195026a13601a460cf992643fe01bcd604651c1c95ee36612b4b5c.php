@@ -57,12 +57,14 @@ class __TwigTemplate_5cd4f2229f279f04680159573957c251759a9525ea58be11d073a1b8c46
         // line 11
         echo "    </select>
     <select>
+        <option value=\"1\" name=\"type_id\">fewjfkejkl</option>
         ";
-        // line 13
+        // line 15
+        echo "        ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(twig_length_filter($this->env, (isset($context["types"]) ? $context["types"] : null)));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-            // line 14
+            // line 16
             echo "            <option value=\"";
             echo twig_escape_filter($this->env, $context["i"], "html", null, true);
             echo "\" name=\"type_id\">";
@@ -73,12 +75,12 @@ class __TwigTemplate_5cd4f2229f279f04680159573957c251759a9525ea58be11d073a1b8c46
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 16
+        // line 18
         echo "    </select>
 
     <input type=\"submit\"/>
     ";
-        // line 19
+        // line 21
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : null), 'form_end');
         echo "
 ";
@@ -96,7 +98,7 @@ class __TwigTemplate_5cd4f2229f279f04680159573957c251759a9525ea58be11d073a1b8c46
 
     public function getDebugInfo()
     {
-        return array (  82 => 19,  77 => 16,  66 => 14,  62 => 13,  58 => 11,  47 => 9,  43 => 8,  38 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  84 => 21,  79 => 18,  68 => 16,  63 => 15,  58 => 11,  47 => 9,  43 => 8,  38 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
@@ -111,6 +113,8 @@ class __TwigTemplate_5cd4f2229f279f04680159573957c251759a9525ea58be11d073a1b8c46
 /*         {% endfor %}*/
 /*     </select>*/
 /*     <select>*/
+/*         <option value="1" name="type_id">fewjfkejkl</option>*/
+/*         {#TODO#}*/
 /*         {% for i in types|length %}*/
 /*             <option value="{{ i }}" name="type_id">{{ types[i] }}</option>*/
 /*         {% endfor %}*/

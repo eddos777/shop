@@ -19,8 +19,8 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446 = $this->env->getExtension("native_profiler");
-        $__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446->enter($__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_971f03e7b0e81e7d445716635bab06ad955d737e3b4db6047d11d152a07e89cb = $this->env->getExtension("native_profiler");
+        $__internal_971f03e7b0e81e7d445716635bab06ad955d737e3b4db6047d11d152a07e89cb->enter($__internal_971f03e7b0e81e7d445716635bab06ad955d737e3b4db6047d11d152a07e89cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -158,56 +158,13 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
         data-show-faces=\"true\">
 </div>
 <div class=\"container\">
-    <nav class=\"navbar navbar-default\">
-        <div class=\"container-fluid\">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class=\"navbar-header\">
-                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\"
-                        data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">
-                    <span class=\"sr-only\">Toggle navigation</span>
-                    <span class=\"icon-bar\"></span>
-                    <span class=\"icon-bar\"></span>
-                    <span class=\"icon-bar\"></span>
-                </button>
-                <a class=\"navbar-brand\" href=\"/\">Shop.ll</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
-                <ul class=\"nav navbar-nav\">
-                    <li><a href=\"login\">Login</a></li>
-                    <li><a href=\"register\">Register</a></li>
-                    <li class=\"dropdown\">
-                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\"
-                           aria-expanded=\"false\">Products type<span class=\"caret\"></span>
-                        </a>
-                        <ul class=\"dropdown-menu\">
-                            <li><a href=\"#\">Action</a></li>
-                            <li><a href=\"#\">Another action</a></li>
-                            <li><a href=\"#\">Something else here</a></li>
-                            <li role=\"separator\" class=\"divider\"></li>
-                            <li><a href=\"#\">Separated link</a></li>
-                            <li role=\"separator\" class=\"divider\"></li>
-                            <li><a href=\"#\">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class=\"navbar-form navbar-left\" role=\"search\">
-                    <div class=\"form-group\">
-                        <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
-                    </div>
-                    <button type=\"submit\" class=\"btn btn-default\">Submit</button>
-                </form>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
     ";
-        // line 167
+        // line 124
         $this->displayBlock('body', $context, $blocks);
-        // line 168
+        // line 125
         echo "    ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 169
+        // line 126
         echo "</div>
 
 <footer id=\"aa-footer\">
@@ -303,11 +260,11 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 </footer>
 
 <script src=\"";
-        // line 263
+        // line 220
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/jquery/dist/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 264
+        // line 221
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("assets/vendor/bootstrap/dist/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <!-- SmartMenus jQuery plugin -->
@@ -331,52 +288,52 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 </html>
 ";
         
-        $__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446->leave($__internal_08689ad24b1feb16056ba7dce375bc1a9a2a84c0ceb7ada1dce930bd15239446_prof);
+        $__internal_971f03e7b0e81e7d445716635bab06ad955d737e3b4db6047d11d152a07e89cb->leave($__internal_971f03e7b0e81e7d445716635bab06ad955d737e3b4db6047d11d152a07e89cb_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724 = $this->env->getExtension("native_profiler");
-        $__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724->enter($__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_9df536e96db1d1755ba9947ae2bc48a49d81c3cbacc4478bc0f88f7134b98e6f = $this->env->getExtension("native_profiler");
+        $__internal_9df536e96db1d1755ba9947ae2bc48a49d81c3cbacc4478bc0f88f7134b98e6f->enter($__internal_9df536e96db1d1755ba9947ae2bc48a49d81c3cbacc4478bc0f88f7134b98e6f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Admin";
         
-        $__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724->leave($__internal_ce248badd10f63ecace31cf5b62887fbfef1f1e60d1fd05149fb941ac9ef9724_prof);
+        $__internal_9df536e96db1d1755ba9947ae2bc48a49d81c3cbacc4478bc0f88f7134b98e6f->leave($__internal_9df536e96db1d1755ba9947ae2bc48a49d81c3cbacc4478bc0f88f7134b98e6f_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5 = $this->env->getExtension("native_profiler");
-        $__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5->enter($__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_7a74d491fe8194f7c97f1b2e900011e583fe09af4feb7b817180b024b7079cae = $this->env->getExtension("native_profiler");
+        $__internal_7a74d491fe8194f7c97f1b2e900011e583fe09af4feb7b817180b024b7079cae->enter($__internal_7a74d491fe8194f7c97f1b2e900011e583fe09af4feb7b817180b024b7079cae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5->leave($__internal_da06e60da9630099130319d7ed34470be6d418f236f53d6974b87aaa3c434cc5_prof);
+        $__internal_7a74d491fe8194f7c97f1b2e900011e583fe09af4feb7b817180b024b7079cae->leave($__internal_7a74d491fe8194f7c97f1b2e900011e583fe09af4feb7b817180b024b7079cae_prof);
 
     }
 
-    // line 167
+    // line 124
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a = $this->env->getExtension("native_profiler");
-        $__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a->enter($__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_db51660ec246df89255285f74650988b95768c7efcd8685ac01af76b51ff44ef = $this->env->getExtension("native_profiler");
+        $__internal_db51660ec246df89255285f74650988b95768c7efcd8685ac01af76b51ff44ef->enter($__internal_db51660ec246df89255285f74650988b95768c7efcd8685ac01af76b51ff44ef_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a->leave($__internal_b9a1c49af9583c57657a2f46ae4014c3cd1d732abb969ff076038cdf096c7c0a_prof);
+        $__internal_db51660ec246df89255285f74650988b95768c7efcd8685ac01af76b51ff44ef->leave($__internal_db51660ec246df89255285f74650988b95768c7efcd8685ac01af76b51ff44ef_prof);
 
     }
 
-    // line 168
+    // line 125
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b = $this->env->getExtension("native_profiler");
-        $__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b->enter($__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_4a9bd093df92bd363b6a82429c737df78a1ea9992e591043aa15bbbc3fdadef8 = $this->env->getExtension("native_profiler");
+        $__internal_4a9bd093df92bd363b6a82429c737df78a1ea9992e591043aa15bbbc3fdadef8->enter($__internal_4a9bd093df92bd363b6a82429c737df78a1ea9992e591043aa15bbbc3fdadef8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b->leave($__internal_f4c616b28672068907d02cb6fd692ca2f88aaa0ad4c712d733b19afade75a10b_prof);
+        $__internal_4a9bd093df92bd363b6a82429c737df78a1ea9992e591043aa15bbbc3fdadef8->leave($__internal_4a9bd093df92bd363b6a82429c737df78a1ea9992e591043aa15bbbc3fdadef8_prof);
 
     }
 
@@ -392,7 +349,7 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 
     public function getDebugInfo()
     {
-        return array (  373 => 168,  362 => 167,  351 => 6,  339 => 5,  311 => 264,  307 => 263,  211 => 169,  208 => 168,  206 => 167,  70 => 34,  42 => 9,  38 => 7,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  330 => 125,  319 => 124,  308 => 6,  296 => 5,  268 => 221,  264 => 220,  168 => 126,  165 => 125,  163 => 124,  70 => 34,  42 => 9,  38 => 7,  36 => 6,  32 => 5,  26 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -518,49 +475,6 @@ class __TwigTemplate_2deb1587ff1c2a58ac3a65f6486ea71b3755b7249bc999206b69553f388
 /*         data-show-faces="true">*/
 /* </div>*/
 /* <div class="container">*/
-/*     <nav class="navbar navbar-default">*/
-/*         <div class="container-fluid">*/
-/*             <!-- Brand and toggle get grouped for better mobile display -->*/
-/*             <div class="navbar-header">*/
-/*                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"*/
-/*                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">*/
-/*                     <span class="sr-only">Toggle navigation</span>*/
-/*                     <span class="icon-bar"></span>*/
-/*                     <span class="icon-bar"></span>*/
-/*                     <span class="icon-bar"></span>*/
-/*                 </button>*/
-/*                 <a class="navbar-brand" href="/">Shop.ll</a>*/
-/*             </div>*/
-/* */
-/*             <!-- Collect the nav links, forms, and other content for toggling -->*/
-/*             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*/
-/*                 <ul class="nav navbar-nav">*/
-/*                     <li><a href="login">Login</a></li>*/
-/*                     <li><a href="register">Register</a></li>*/
-/*                     <li class="dropdown">*/
-/*                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"*/
-/*                            aria-expanded="false">Products type<span class="caret"></span>*/
-/*                         </a>*/
-/*                         <ul class="dropdown-menu">*/
-/*                             <li><a href="#">Action</a></li>*/
-/*                             <li><a href="#">Another action</a></li>*/
-/*                             <li><a href="#">Something else here</a></li>*/
-/*                             <li role="separator" class="divider"></li>*/
-/*                             <li><a href="#">Separated link</a></li>*/
-/*                             <li role="separator" class="divider"></li>*/
-/*                             <li><a href="#">One more separated link</a></li>*/
-/*                         </ul>*/
-/*                     </li>*/
-/*                 </ul>*/
-/*                 <form class="navbar-form navbar-left" role="search">*/
-/*                     <div class="form-group">*/
-/*                         <input type="text" class="form-control" placeholder="Search">*/
-/*                     </div>*/
-/*                     <button type="submit" class="btn btn-default">Submit</button>*/
-/*                 </form>*/
-/*             </div><!-- /.navbar-collapse -->*/
-/*         </div><!-- /.container-fluid -->*/
-/*     </nav>*/
 /*     {% block body %}{% endblock %}*/
 /*     {% block javascripts %}{% endblock %}*/
 /* </div>*/

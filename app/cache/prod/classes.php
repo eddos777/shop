@@ -1963,6 +1963,9 @@ $this->isRecursive = false;
 } catch (\Exception $e) {
 $this->isRecursive = false;
 throw $e;
+} catch (\Throwable $e) {
+$this->isRecursive = false;
+throw $e;
 }
 }
 return $type && $log;
@@ -1973,7 +1976,7 @@ if (!$exception instanceof \Exception) {
 $exception = new FatalThrowableError($exception);
 }
 $type = $exception instanceof FatalErrorException ? $exception->getSeverity() : E_ERROR;
-if ($this->loggedErrors & $type) {
+if (($this->loggedErrors & $type) || $exception instanceof FatalThrowableError) {
 $e = array('type'=> $type,'file'=> $exception->getFile(),'line'=> $exception->getLine(),'level'=> error_reporting(),'stack'=> $exception->getTrace(),
 );
 if ($exception instanceof FatalErrorException) {
@@ -1991,9 +1994,9 @@ $e['context'] = $exception->getContext();
 } else {
 $message ='Uncaught Exception: '.$exception->getMessage();
 }
-if ($this->loggedErrors & $e['type']) {
-$this->loggers[$e['type']][0]->log($this->loggers[$e['type']][1], $message, $e);
 }
+if ($this->loggedErrors & $type) {
+$this->loggers[$type][0]->log($this->loggers[$type][1], $message, $e);
 }
 if ($exception instanceof FatalErrorException && !$exception instanceof OutOfMemoryException && $error) {
 foreach ($this->getFatalErrorHandlers() as $handler) {
@@ -2035,6 +2038,7 @@ while (self::$stackedErrorLevels) {
 static::unstackErrors();
 }
 } catch (\Exception $exception) {
+} catch (\Throwable $exception) {
 }
 if ($error && $error['type'] &= E_PARSE | E_ERROR | E_CORE_ERROR | E_COMPILE_ERROR) {
 $handler->throwAt(0, true);
@@ -2916,6 +2920,7 @@ return $bundleName;
 $lev = levenshtein($nonExistentBundleName, $bundleName);
 if ($lev <= strlen($nonExistentBundleName) / 3 && ($alternative === null || $lev < $shortest)) {
 $alternative = $bundleName;
+$shortest = $lev;
 }
 }
 return $alternative;
@@ -3491,7 +3496,7 @@ namespace
 {
 class Twig_Environment
 {
-const VERSION ='1.24.0';
+const VERSION ='1.24.1';
 protected $charset;
 protected $loader;
 protected $debug;
@@ -3687,6 +3692,9 @@ $this->setLoader($loader);
 try {
 $template = $this->loadTemplate($name);
 } catch (Exception $e) {
+$this->setLoader($current);
+throw $e;
+} catch (Throwable $e) {
 $this->setLoader($current);
 throw $e;
 }
@@ -5338,6 +5346,11 @@ while (ob_get_level() > $level) {
 ob_end_clean();
 }
 throw $e;
+} catch (Throwable $e) {
+while (ob_get_level() > $level) {
+ob_end_clean();
+}
+throw $e;
 }
 return ob_get_clean();
 }
@@ -5470,7 +5483,7 @@ return false;
 if ($ignoreStrictCheck || !$this->env->isStrictVariables()) {
 return;
 }
-throw new Twig_Error_Runtime(sprintf('Method "%s" for object "%s" does not exist', $item, get_class($object)), -1, $this->getTemplateName());
+throw new Twig_Error_Runtime(sprintf('Neither the property "%1$s" nor one of the methods "%1$s()", "get%1$s()"/"is%1$s()" or "__call()" exist and have public access in class "%2$s"', $item, get_class($object)), -1, $this->getTemplateName());
 }
 if ($isDefinedTest) {
 return true;

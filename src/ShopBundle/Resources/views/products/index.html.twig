@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block head %}<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-    {% endblock %}
+{% block head %}
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+{% endblock %}
 
 {% block title %}{{ "Shop.ll" }}
-    {% endblock %}
+{% endblock %}
 
 {% block body %}
     <!-- wpf loader Two -->
@@ -32,7 +33,8 @@
                                 <!-- start language -->
                                 <div class="aa-language">
                                     <div class="dropdown">
-                                        <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                             <img src="img/flag/english.jpg" alt="english flag">ENGLISH
                                             <span class="caret"></span>
                                         </a>
@@ -47,7 +49,8 @@
                                 <!-- start currency -->
                                 <div class="aa-currency">
                                     <div class="dropdown">
-                                        <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                             <i class="fa fa-usd"></i>USD
                                             <span class="caret"></span>
                                         </a>
@@ -71,7 +74,12 @@
                                     <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
                                     <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
                                     <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                                    <p>{% if is_granted("ROLE_USER") %}
+                                        Hi {{ app.user.username }}</p>
+                                    {% else %}
+                                        <li><a href="{{ path("login") }}">Login</a></li>
+
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
@@ -108,7 +116,8 @@
                                 <div class="aa-cartbox-summary">
                                     <ul>
                                         <li>
-                                            <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>
+                                            <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg"
+                                                                                    alt="img"></a>
                                             <div class="aa-cartbox-info">
                                                 <h4><a href="#">Product Name</a></h4>
                                                 <p>1 x $250</p>
@@ -116,7 +125,8 @@
                                             <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
                                         </li>
                                         <li>
-                                            <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>
+                                            <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg"
+                                                                                    alt="img"></a>
                                             <div class="aa-cartbox-info">
                                                 <h4><a href="#">Product Name</a></h4>
                                                 <p>1 x $250</p>
@@ -159,7 +169,8 @@
                 <!-- Navbar -->
                 <div class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -209,7 +220,8 @@
                                                     <li><a href="#">Earrings</a></li>
                                                     <li><a href="#">Jewellery Sets</a></li>
                                                     <li><a href="#">Lockets</a></li>
-                                                    <li class="disabled"><a class="disabled" href="#">Disabled item</a></li>
+                                                    <li class="disabled"><a class="disabled" href="#">Disabled item</a>
+                                                    </li>
                                                     <li><a href="#">Jeans</a></li>
                                                     <li><a href="#">Polo T-Shirts</a></li>
                                                     <li><a href="#">SKirts</a></li>
@@ -334,7 +346,8 @@
                                 <p data-seq>COMMON</p>
                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>
                             </div>
-                        </li><li>
+                        </li>
+                        <li>
                             <div class="seq-model">
                                 <img data-seq src="images/130883.jpg" alt="Shoes slide img"/>
                             </div>
@@ -387,13 +400,13 @@
                                         </div>
                                     </div>
                                     <div class="aa-single-promo-right">
-                                            <div class="aa-promo-banner">
-                                                <img src="images/130883.jpg" alt="img">
-                                                <div class="aa-prom-content">
-                                                    <span>fds</span>
-                                                    <h4><a href="#">On Shoes</a></h4>
-                                                </div>
+                                        <div class="aa-promo-banner">
+                                            <img src="images/130883.jpg" alt="img">
+                                            <div class="aa-prom-content">
+                                                <span>fds</span>
+                                                <h4><a href="#">On Shoes</a></h4>
                                             </div>
+                                        </div>
                                     </div>
                                     <div class="aa-single-promo-right">
                                         <div class="aa-promo-banner">
@@ -446,9 +459,9 @@
                                                     <figure>
                                                         {#TODO#}
                                                         {#<a class="aa-product-img" href="#">#}
-                                                            {#<img class="img-thumbnail"#}
-                                                                 {#src="{{ product.images[0].uri }}"#}
-                                                                 {#alt="polo shirt img"></a>#}
+                                                        {#<img class="img-thumbnail"#}
+                                                        {#src="{{ product.images[0].uri }}"#}
+                                                        {#alt="polo shirt img"></a>#}
                                                         <a class="aa-add-card-btn" href="#"><span
                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>
                                                         <figcaption>
@@ -489,8 +502,8 @@
                                                     <figure>
                                                         {#TODO#}
                                                         {#<a class="aa-product-img" href="#"><img#}
-                                                                    {#src="{{ product.images[0].uri }}"#}
-                                                                    {#alt="polo shirt img"></a>#}
+                                                        {#src="{{ product.images[0].uri }}"#}
+                                                        {#alt="polo shirt img"></a>#}
                                                         <a class="aa-add-card-btn" href="#"><span
                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>
                                                         <figcaption>
@@ -526,8 +539,8 @@
                                                     <figure>
                                                         {#TODO#}
                                                         {#<a class="aa-product-img" href="#"><img#}
-                                                                    {#src="{{ product.images[0].uri }}"#}
-                                                                    {#alt="polo shirt img"></a>#}
+                                                        {#src="{{ product.images[0].uri }}"#}
+                                                        {#alt="polo shirt img"></a>#}
                                                         <a class="aa-add-card-btn" href="#"><span
                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>
                                                         <figcaption>

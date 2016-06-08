@@ -23,49 +23,50 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_564fa8e79ab4f77cdd041dd18f725f4aa3aa318e9547311a7398aecc7c3d55a6 = $this->env->getExtension("native_profiler");
-        $__internal_564fa8e79ab4f77cdd041dd18f725f4aa3aa318e9547311a7398aecc7c3d55a6->enter($__internal_564fa8e79ab4f77cdd041dd18f725f4aa3aa318e9547311a7398aecc7c3d55a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ShopBundle:Products:index.html.twig"));
+        $__internal_3e9dae514536407600c1b5d39d5c015ac678c1177a8e3da14abfd76cdacc8bf7 = $this->env->getExtension("native_profiler");
+        $__internal_3e9dae514536407600c1b5d39d5c015ac678c1177a8e3da14abfd76cdacc8bf7->enter($__internal_3e9dae514536407600c1b5d39d5c015ac678c1177a8e3da14abfd76cdacc8bf7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ShopBundle:Products:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_564fa8e79ab4f77cdd041dd18f725f4aa3aa318e9547311a7398aecc7c3d55a6->leave($__internal_564fa8e79ab4f77cdd041dd18f725f4aa3aa318e9547311a7398aecc7c3d55a6_prof);
+        $__internal_3e9dae514536407600c1b5d39d5c015ac678c1177a8e3da14abfd76cdacc8bf7->leave($__internal_3e9dae514536407600c1b5d39d5c015ac678c1177a8e3da14abfd76cdacc8bf7_prof);
 
     }
 
     // line 3
     public function block_head($context, array $blocks = array())
     {
-        $__internal_6b78ef66ec4826a021ec177302bbbd68657338737f3f1d2b8ed9c5361c451ef3 = $this->env->getExtension("native_profiler");
-        $__internal_6b78ef66ec4826a021ec177302bbbd68657338737f3f1d2b8ed9c5361c451ef3->enter($__internal_6b78ef66ec4826a021ec177302bbbd68657338737f3f1d2b8ed9c5361c451ef3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head"));
+        $__internal_7141512d58fc6da3e4432f483e4b79656c82d6317bd10cd6dcfdceb3723a16fc = $this->env->getExtension("native_profiler");
+        $__internal_7141512d58fc6da3e4432f483e4b79656c82d6317bd10cd6dcfdceb3723a16fc->enter($__internal_7141512d58fc6da3e4432f483e4b79656c82d6317bd10cd6dcfdceb3723a16fc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head"));
 
-        echo "<link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"images/favicon.ico\"/>
-    ";
+        // line 4
+        echo "    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"images/favicon.ico\"/>
+";
         
-        $__internal_6b78ef66ec4826a021ec177302bbbd68657338737f3f1d2b8ed9c5361c451ef3->leave($__internal_6b78ef66ec4826a021ec177302bbbd68657338737f3f1d2b8ed9c5361c451ef3_prof);
+        $__internal_7141512d58fc6da3e4432f483e4b79656c82d6317bd10cd6dcfdceb3723a16fc->leave($__internal_7141512d58fc6da3e4432f483e4b79656c82d6317bd10cd6dcfdceb3723a16fc_prof);
 
     }
 
-    // line 6
+    // line 7
     public function block_title($context, array $blocks = array())
     {
-        $__internal_cc0dbd45c76db4048bfcbc031165061a7dda3c1143412ab118281260e37390bd = $this->env->getExtension("native_profiler");
-        $__internal_cc0dbd45c76db4048bfcbc031165061a7dda3c1143412ab118281260e37390bd->enter($__internal_cc0dbd45c76db4048bfcbc031165061a7dda3c1143412ab118281260e37390bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_07e885d24764b40edefd31c6a5ac72bd491c632e92d5d10715868d306fff6461 = $this->env->getExtension("native_profiler");
+        $__internal_07e885d24764b40edefd31c6a5ac72bd491c632e92d5d10715868d306fff6461->enter($__internal_07e885d24764b40edefd31c6a5ac72bd491c632e92d5d10715868d306fff6461_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Shop.ll";
         echo "
-    ";
+";
         
-        $__internal_cc0dbd45c76db4048bfcbc031165061a7dda3c1143412ab118281260e37390bd->leave($__internal_cc0dbd45c76db4048bfcbc031165061a7dda3c1143412ab118281260e37390bd_prof);
+        $__internal_07e885d24764b40edefd31c6a5ac72bd491c632e92d5d10715868d306fff6461->leave($__internal_07e885d24764b40edefd31c6a5ac72bd491c632e92d5d10715868d306fff6461_prof);
 
     }
 
-    // line 9
+    // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f486d90c00b3e701cf4d06efde799f4f0c7acabbf2550d68f088fd1a4c5b6e6d = $this->env->getExtension("native_profiler");
-        $__internal_f486d90c00b3e701cf4d06efde799f4f0c7acabbf2550d68f088fd1a4c5b6e6d->enter($__internal_f486d90c00b3e701cf4d06efde799f4f0c7acabbf2550d68f088fd1a4c5b6e6d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_4ff7bdd2f5b4cee95c6bb2cfcadab6157196ec78311d65aaaf5254c49ba9459a = $this->env->getExtension("native_profiler");
+        $__internal_4ff7bdd2f5b4cee95c6bb2cfcadab6157196ec78311d65aaaf5254c49ba9459a->enter($__internal_4ff7bdd2f5b4cee95c6bb2cfcadab6157196ec78311d65aaaf5254c49ba9459a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 10
+        // line 11
         echo "    <!-- wpf loader Two -->
     <div id=\"wpf-loader-two\">
         <div class=\"wpf-loader-two-inner\">
@@ -91,7 +92,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                 <!-- start language -->
                                 <div class=\"aa-language\">
                                     <div class=\"dropdown\">
-                                        <a class=\"btn dropdown-toggle\" href=\"#\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">
+                                        <a class=\"btn dropdown-toggle\" href=\"#\" type=\"button\" id=\"dropdownMenu1\"
+                                           data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">
                                             <img src=\"img/flag/english.jpg\" alt=\"english flag\">ENGLISH
                                             <span class=\"caret\"></span>
                                         </a>
@@ -106,7 +108,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                 <!-- start currency -->
                                 <div class=\"aa-currency\">
                                     <div class=\"dropdown\">
-                                        <a class=\"btn dropdown-toggle\" href=\"#\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">
+                                        <a class=\"btn dropdown-toggle\" href=\"#\" type=\"button\" id=\"dropdownMenu1\"
+                                           data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">
                                             <i class=\"fa fa-usd\"></i>USD
                                             <span class=\"caret\"></span>
                                         </a>
@@ -130,8 +133,24 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                     <li class=\"hidden-xs\"><a href=\"wishlist.html\">Wishlist</a></li>
                                     <li class=\"hidden-xs\"><a href=\"cart.html\">My Cart</a></li>
                                     <li class=\"hidden-xs\"><a href=\"checkout.html\">Checkout</a></li>
-                                    <li><a href=\"\" data-toggle=\"modal\" data-target=\"#login-modal\">Login</a></li>
-                                </ul>
+                                    <p>";
+        // line 77
+        if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
+            // line 78
+            echo "                                        Hi ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", array()), "username", array()), "html", null, true);
+            echo "</p>
+                                    ";
+        } else {
+            // line 80
+            echo "                                        <li><a href=\"";
+            echo $this->env->getExtension('routing')->getPath("login");
+            echo "\">Login</a></li>
+
+                                    ";
+        }
+        // line 83
+        echo "                                </ul>
                             </div>
                         </div>
                     </div>
@@ -167,7 +186,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                 <div class=\"aa-cartbox-summary\">
                                     <ul>
                                         <li>
-                                            <a class=\"aa-cartbox-img\" href=\"#\"><img src=\"img/woman-small-2.jpg\" alt=\"img\"></a>
+                                            <a class=\"aa-cartbox-img\" href=\"#\"><img src=\"img/woman-small-2.jpg\"
+                                                                                    alt=\"img\"></a>
                                             <div class=\"aa-cartbox-info\">
                                                 <h4><a href=\"#\">Product Name</a></h4>
                                                 <p>1 x \$250</p>
@@ -175,7 +195,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                             <a class=\"aa-remove-product\" href=\"#\"><span class=\"fa fa-times\"></span></a>
                                         </li>
                                         <li>
-                                            <a class=\"aa-cartbox-img\" href=\"#\"><img src=\"img/woman-small-1.jpg\" alt=\"img\"></a>
+                                            <a class=\"aa-cartbox-img\" href=\"#\"><img src=\"img/woman-small-1.jpg\"
+                                                                                    alt=\"img\"></a>
                                             <div class=\"aa-cartbox-info\">
                                                 <h4><a href=\"#\">Product Name</a></h4>
                                                 <p>1 x \$250</p>
@@ -218,7 +239,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                 <!-- Navbar -->
                 <div class=\"navbar navbar-default\" role=\"navigation\">
                     <div class=\"navbar-header\">
-                        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">
+                        <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\"
+                                data-target=\".navbar-collapse\">
                             <span class=\"sr-only\">Toggle navigation</span>
                             <span class=\"icon-bar\"></span>
                             <span class=\"icon-bar\"></span>
@@ -268,7 +290,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                     <li><a href=\"#\">Earrings</a></li>
                                                     <li><a href=\"#\">Jewellery Sets</a></li>
                                                     <li><a href=\"#\">Lockets</a></li>
-                                                    <li class=\"disabled\"><a class=\"disabled\" href=\"#\">Disabled item</a></li>
+                                                    <li class=\"disabled\"><a class=\"disabled\" href=\"#\">Disabled item</a>
+                                                    </li>
                                                     <li><a href=\"#\">Jeans</a></li>
                                                     <li><a href=\"#\">Polo T-Shirts</a></li>
                                                     <li><a href=\"#\">SKirts</a></li>
@@ -393,7 +416,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                 <p data-seq>COMMON</p>
                                 <a data-seq href=\"#\" class=\"aa-shop-now-btn aa-secondary-btn\">SHOP NOW</a>
                             </div>
-                        </li><li>
+                        </li>
+                        <li>
                             <div class=\"seq-model\">
                                 <img data-seq src=\"images/130883.jpg\" alt=\"Shoes slide img\"/>
                             </div>
@@ -446,13 +470,13 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                         </div>
                                     </div>
                                     <div class=\"aa-single-promo-right\">
-                                            <div class=\"aa-promo-banner\">
-                                                <img src=\"images/130883.jpg\" alt=\"img\">
-                                                <div class=\"aa-prom-content\">
-                                                    <span>fds</span>
-                                                    <h4><a href=\"#\">On Shoes</a></h4>
-                                                </div>
+                                        <div class=\"aa-promo-banner\">
+                                            <img src=\"images/130883.jpg\" alt=\"img\">
+                                            <div class=\"aa-prom-content\">
+                                                <span>fds</span>
+                                                <h4><a href=\"#\">On Shoes</a></h4>
                                             </div>
+                                        </div>
                                     </div>
                                     <div class=\"aa-single-promo-right\">
                                         <div class=\"aa-promo-banner\">
@@ -492,11 +516,11 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                 <!-- start prduct navigation -->
                                 <ul class=\"nav nav-tabs aa-products-tab\">
                                     ";
-        // line 435
+        // line 448
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) ? $context["categories"] : $this->getContext($context, "categories")));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 436
+            // line 449
             echo "                                        <li><a href=\"";
             echo twig_escape_filter($this->env, $this->getAttribute($context["category"], "name", array()), "html", null, true);
             echo "\" data-toggle=\"tab\">";
@@ -507,7 +531,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 438
+        // line 451
         echo "                                </ul>
                                 <!-- Tab panes -->
                                 <div class=\"tab-content\">
@@ -515,39 +539,39 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                     <div class=\"tab-pane fade in active\" id=\"men\">
                                         <ul class=\"aa-product-catg\">
                                             ";
-        // line 444
+        // line 457
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 445
+            // line 458
             echo "                                                <li class=\"col-sm-4\">
                                                     <figure>
                                                         ";
-            // line 448
+            // line 461
             echo "                                                        ";
-            // line 449
-            echo "                                                            ";
-            // line 450
-            echo "                                                                 ";
-            // line 451
-            echo "                                                                 ";
-            // line 452
+            // line 462
+            echo "                                                        ";
+            // line 463
+            echo "                                                        ";
+            // line 464
+            echo "                                                        ";
+            // line 465
             echo "                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
                                                                     class=\"fa fa-shopping-cart\"></span>Add To Cart</a>
                                                         <figcaption>
                                                             <h4 class=\"aa-product-title\"><a
                                                                         href=\"#\">";
-            // line 456
+            // line 469
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></h4>
                                                             <span class=\"aa-product-price\">";
-            // line 457
+            // line 470
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "
                                                             </span>
                                                             <span class=\"aa-product-price\">
                                                                 <del>";
-            // line 460
+            // line 473
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</del></span>
                                                         </figcaption>
@@ -565,7 +589,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                     </div>
                                                     <!-- product badge -->
                                                     <span class=\"aa-badge aa-sale\" href=\"#\">";
-            // line 475
+            // line 488
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "type", array()), "html", null, true);
             echo "</span>
                                                 </li>
@@ -575,7 +599,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 479
+        // line 492
         echo "                                        </ul>
                                         <a class=\"aa-browse-btn\" href=\"#\">Browse next products <span
                                                     class=\"fa fa-long-arrow-right\"></span></a>
@@ -585,35 +609,35 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                     <div class=\"tab-pane fade\" id=\"sports\">
                                         <ul class=\"aa-product-catg\">
                                             ";
-        // line 487
+        // line 500
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 488
+            // line 501
             echo "                                                <li class=\"col-sm-4\">
                                                     <figure>
                                                         ";
-            // line 491
+            // line 504
             echo "                                                        ";
-            // line 492
-            echo "                                                                    ";
-            // line 493
-            echo "                                                                    ";
-            // line 494
+            // line 505
+            echo "                                                        ";
+            // line 506
+            echo "                                                        ";
+            // line 507
             echo "                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
                                                                     class=\"fa fa-shopping-cart\"></span>Add To Cart</a>
                                                         <figcaption>
                                                             <h4 class=\"aa-product-title\"><a
                                                                         href=\"#\">";
-            // line 498
+            // line 511
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></h4>
                                                             <span class=\"aa-product-price\">";
-            // line 499
+            // line 512
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</span><span
                                                                     class=\"aa-product-price\"><del>";
-            // line 500
+            // line 513
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</del></span>
                                                         </figcaption>
@@ -631,7 +655,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                     </div>
                                                     <!-- product badge -->
                                                     <span class=\"aa-badge aa-sale\" href=\"#\">";
-            // line 515
+            // line 528
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "type", array()), "html", null, true);
             echo "</span>
                                                 </li>
@@ -640,7 +664,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 518
+        // line 531
         echo "                                        </ul>
                                     </div>
                                     <!-- / sports product category -->
@@ -648,35 +672,35 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                     <div class=\"tab-pane fade\" id=\"electronics\">
                                         <ul class=\"aa-product-catg\">
                                             ";
-        // line 524
+        // line 537
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) ? $context["products"] : $this->getContext($context, "products")));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 525
+            // line 538
             echo "                                                <li class=\"col-sm-4\">
                                                     <figure>
                                                         ";
-            // line 528
+            // line 541
             echo "                                                        ";
-            // line 529
-            echo "                                                                    ";
-            // line 530
-            echo "                                                                    ";
-            // line 531
+            // line 542
+            echo "                                                        ";
+            // line 543
+            echo "                                                        ";
+            // line 544
             echo "                                                        <a class=\"aa-add-card-btn\" href=\"#\"><span
                                                                     class=\"fa fa-shopping-cart\"></span>Add To Cart</a>
                                                         <figcaption>
                                                             <h4 class=\"aa-product-title\"><a
                                                                         href=\"#\">";
-            // line 535
+            // line 548
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
             echo "</a></h4>
                                                             <span class=\"aa-product-price\">";
-            // line 536
+            // line 549
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</span><span
                                                                     class=\"aa-product-price\"><del>";
-            // line 537
+            // line 550
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "price", array()), "html", null, true);
             echo "</del></span>
                                                         </figcaption>
@@ -695,7 +719,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
                                                     </div>
                                                     <!-- product badge -->
                                                     <span class=\"aa-badge aa-sale\" href=\"#\">";
-            // line 553
+            // line 566
             echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "type", array()), "html", null, true);
             echo "</span>
                                                 </li>
@@ -704,7 +728,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 556
+        // line 569
         echo "                                        </ul>
                                         <a class=\"aa-browse-btn\" href=\"#\">Browse all Product <span
                                                     class=\"fa fa-long-arrow-right\"></span></a>
@@ -811,7 +835,7 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 
 ";
         
-        $__internal_f486d90c00b3e701cf4d06efde799f4f0c7acabbf2550d68f088fd1a4c5b6e6d->leave($__internal_f486d90c00b3e701cf4d06efde799f4f0c7acabbf2550d68f088fd1a4c5b6e6d_prof);
+        $__internal_4ff7bdd2f5b4cee95c6bb2cfcadab6157196ec78311d65aaaf5254c49ba9459a->leave($__internal_4ff7bdd2f5b4cee95c6bb2cfcadab6157196ec78311d65aaaf5254c49ba9459a_prof);
 
     }
 
@@ -827,16 +851,17 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 
     public function getDebugInfo()
     {
-        return array (  708 => 556,  699 => 553,  680 => 537,  676 => 536,  672 => 535,  666 => 531,  664 => 530,  662 => 529,  660 => 528,  656 => 525,  652 => 524,  644 => 518,  635 => 515,  617 => 500,  613 => 499,  609 => 498,  603 => 494,  601 => 493,  599 => 492,  597 => 491,  593 => 488,  589 => 487,  579 => 479,  569 => 475,  551 => 460,  545 => 457,  541 => 456,  535 => 452,  533 => 451,  531 => 450,  529 => 449,  527 => 448,  523 => 445,  519 => 444,  511 => 438,  500 => 436,  496 => 435,  69 => 10,  63 => 9,  49 => 6,  36 => 3,  11 => 1,);
+        return array (  732 => 569,  723 => 566,  704 => 550,  700 => 549,  696 => 548,  690 => 544,  688 => 543,  686 => 542,  684 => 541,  680 => 538,  676 => 537,  668 => 531,  659 => 528,  641 => 513,  637 => 512,  633 => 511,  627 => 507,  625 => 506,  623 => 505,  621 => 504,  617 => 501,  613 => 500,  603 => 492,  593 => 488,  575 => 473,  569 => 470,  565 => 469,  559 => 465,  557 => 464,  555 => 463,  553 => 462,  551 => 461,  547 => 458,  543 => 457,  535 => 451,  524 => 449,  520 => 448,  153 => 83,  146 => 80,  140 => 78,  138 => 77,  70 => 11,  64 => 10,  50 => 7,  42 => 4,  36 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
 /* */
-/* {% block head %}<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>*/
-/*     {% endblock %}*/
+/* {% block head %}*/
+/*     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>*/
+/* {% endblock %}*/
 /* */
 /* {% block title %}{{ "Shop.ll" }}*/
-/*     {% endblock %}*/
+/* {% endblock %}*/
 /* */
 /* {% block body %}*/
 /*     <!-- wpf loader Two -->*/
@@ -864,7 +889,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                 <!-- start language -->*/
 /*                                 <div class="aa-language">*/
 /*                                     <div class="dropdown">*/
-/*                                         <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">*/
+/*                                         <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1"*/
+/*                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">*/
 /*                                             <img src="img/flag/english.jpg" alt="english flag">ENGLISH*/
 /*                                             <span class="caret"></span>*/
 /*                                         </a>*/
@@ -879,7 +905,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                 <!-- start currency -->*/
 /*                                 <div class="aa-currency">*/
 /*                                     <div class="dropdown">*/
-/*                                         <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">*/
+/*                                         <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1"*/
+/*                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">*/
 /*                                             <i class="fa fa-usd"></i>USD*/
 /*                                             <span class="caret"></span>*/
 /*                                         </a>*/
@@ -903,7 +930,12 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                     <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>*/
 /*                                     <li class="hidden-xs"><a href="cart.html">My Cart</a></li>*/
 /*                                     <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>*/
-/*                                     <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>*/
+/*                                     <p>{% if is_granted("ROLE_USER") %}*/
+/*                                         Hi {{ app.user.username }}</p>*/
+/*                                     {% else %}*/
+/*                                         <li><a href="{{ path("login") }}">Login</a></li>*/
+/* */
+/*                                     {% endif %}*/
 /*                                 </ul>*/
 /*                             </div>*/
 /*                         </div>*/
@@ -940,7 +972,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                 <div class="aa-cartbox-summary">*/
 /*                                     <ul>*/
 /*                                         <li>*/
-/*                                             <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>*/
+/*                                             <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg"*/
+/*                                                                                     alt="img"></a>*/
 /*                                             <div class="aa-cartbox-info">*/
 /*                                                 <h4><a href="#">Product Name</a></h4>*/
 /*                                                 <p>1 x $250</p>*/
@@ -948,7 +981,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                             <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>*/
 /*                                         </li>*/
 /*                                         <li>*/
-/*                                             <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>*/
+/*                                             <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg"*/
+/*                                                                                     alt="img"></a>*/
 /*                                             <div class="aa-cartbox-info">*/
 /*                                                 <h4><a href="#">Product Name</a></h4>*/
 /*                                                 <p>1 x $250</p>*/
@@ -991,7 +1025,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                 <!-- Navbar -->*/
 /*                 <div class="navbar navbar-default" role="navigation">*/
 /*                     <div class="navbar-header">*/
-/*                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">*/
+/*                         <button type="button" class="navbar-toggle" data-toggle="collapse"*/
+/*                                 data-target=".navbar-collapse">*/
 /*                             <span class="sr-only">Toggle navigation</span>*/
 /*                             <span class="icon-bar"></span>*/
 /*                             <span class="icon-bar"></span>*/
@@ -1041,7 +1076,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                     <li><a href="#">Earrings</a></li>*/
 /*                                                     <li><a href="#">Jewellery Sets</a></li>*/
 /*                                                     <li><a href="#">Lockets</a></li>*/
-/*                                                     <li class="disabled"><a class="disabled" href="#">Disabled item</a></li>*/
+/*                                                     <li class="disabled"><a class="disabled" href="#">Disabled item</a>*/
+/*                                                     </li>*/
 /*                                                     <li><a href="#">Jeans</a></li>*/
 /*                                                     <li><a href="#">Polo T-Shirts</a></li>*/
 /*                                                     <li><a href="#">SKirts</a></li>*/
@@ -1166,7 +1202,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                 <p data-seq>COMMON</p>*/
 /*                                 <a data-seq href="#" class="aa-shop-now-btn aa-secondary-btn">SHOP NOW</a>*/
 /*                             </div>*/
-/*                         </li><li>*/
+/*                         </li>*/
+/*                         <li>*/
 /*                             <div class="seq-model">*/
 /*                                 <img data-seq src="images/130883.jpg" alt="Shoes slide img"/>*/
 /*                             </div>*/
@@ -1219,13 +1256,13 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                         </div>*/
 /*                                     </div>*/
 /*                                     <div class="aa-single-promo-right">*/
-/*                                             <div class="aa-promo-banner">*/
-/*                                                 <img src="images/130883.jpg" alt="img">*/
-/*                                                 <div class="aa-prom-content">*/
-/*                                                     <span>fds</span>*/
-/*                                                     <h4><a href="#">On Shoes</a></h4>*/
-/*                                                 </div>*/
+/*                                         <div class="aa-promo-banner">*/
+/*                                             <img src="images/130883.jpg" alt="img">*/
+/*                                             <div class="aa-prom-content">*/
+/*                                                 <span>fds</span>*/
+/*                                                 <h4><a href="#">On Shoes</a></h4>*/
 /*                                             </div>*/
+/*                                         </div>*/
 /*                                     </div>*/
 /*                                     <div class="aa-single-promo-right">*/
 /*                                         <div class="aa-promo-banner">*/
@@ -1278,9 +1315,9 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                     <figure>*/
 /*                                                         {#TODO#}*/
 /*                                                         {#<a class="aa-product-img" href="#">#}*/
-/*                                                             {#<img class="img-thumbnail"#}*/
-/*                                                                  {#src="{{ product.images[0].uri }}"#}*/
-/*                                                                  {#alt="polo shirt img"></a>#}*/
+/*                                                         {#<img class="img-thumbnail"#}*/
+/*                                                         {#src="{{ product.images[0].uri }}"#}*/
+/*                                                         {#alt="polo shirt img"></a>#}*/
 /*                                                         <a class="aa-add-card-btn" href="#"><span*/
 /*                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>*/
 /*                                                         <figcaption>*/
@@ -1321,8 +1358,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                     <figure>*/
 /*                                                         {#TODO#}*/
 /*                                                         {#<a class="aa-product-img" href="#"><img#}*/
-/*                                                                     {#src="{{ product.images[0].uri }}"#}*/
-/*                                                                     {#alt="polo shirt img"></a>#}*/
+/*                                                         {#src="{{ product.images[0].uri }}"#}*/
+/*                                                         {#alt="polo shirt img"></a>#}*/
 /*                                                         <a class="aa-add-card-btn" href="#"><span*/
 /*                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>*/
 /*                                                         <figcaption>*/
@@ -1358,8 +1395,8 @@ class __TwigTemplate_2e8f2a4ef759b49c6df3a5fd5f908b8de183f55df6fdfa9a2e5122aca35
 /*                                                     <figure>*/
 /*                                                         {#TODO#}*/
 /*                                                         {#<a class="aa-product-img" href="#"><img#}*/
-/*                                                                     {#src="{{ product.images[0].uri }}"#}*/
-/*                                                                     {#alt="polo shirt img"></a>#}*/
+/*                                                         {#src="{{ product.images[0].uri }}"#}*/
+/*                                                         {#alt="polo shirt img"></a>#}*/
 /*                                                         <a class="aa-add-card-btn" href="#"><span*/
 /*                                                                     class="fa fa-shopping-cart"></span>Add To Cart</a>*/
 /*                                                         <figcaption>*/

@@ -36,12 +36,13 @@ class ProductsController extends Controller
             $images = $em
                 ->getRepository('ShopBundle:ProductPictures')
                 ->findBy(
-                    ["productId"=>$product->getId()]
+                    ["productId" => $product->getId()]
                 );
             $product->setImages($images);
         }
-        return $this->render('ShopBundle:Products:index.html.twig', compact('products','categories'));
+        return $this->render('ShopBundle:Products:index.html.twig', compact('products', 'categories'));
     }
+
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
@@ -51,13 +52,15 @@ class ProductsController extends Controller
         $authenticationUtils = $this->get('security.authentication_utils');
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
+
         return $this->render(
             'ShopBundle:Products:login.html.twig', [
                 'last_username' => $lastUsername,
-                'error'         => $error,
+                'error' => $error,
             ]
         );
     }
+
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
@@ -87,10 +90,12 @@ class ProductsController extends Controller
             ]
         );
     }
+
     public function logoutAction()
     {
         return $this->redirectToRoute('index');
     }
+
     /**
      * @param User $user
      * @param Request $request
